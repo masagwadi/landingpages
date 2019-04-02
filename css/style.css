@@ -1,0 +1,75 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.row.no-pad > [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row.pad-x-5 > [class*=col-] {
+  padding: 5px;
+}
+
+.lesson-card {
+  display: table;
+  width: 100%;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+}
+.lesson-card--img {
+  display: table-cell;
+  height: 50px;
+  padding: 10px;
+  border-right: 1px solid #d8d8d8;
+}
+.lesson-card--img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.lesson-card--img .fas {
+  font-size: 40px;
+}
+.lesson-card--copy {
+  display: table-cell;
+  height: 50px;
+  padding: 10px;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.quote__img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.quote__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.quote__copy__title {
+  font-size: 26px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.quote__copy__intro {
+  font-size: 14px;
+  line-height: 16px;
+}
+.quote__copy__subtitle {
+  font-size: 24px;
+  list-style: 28px;
+}
+
+/*# sourceMappingURL=style.css.map */

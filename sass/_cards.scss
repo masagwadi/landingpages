@@ -1,0 +1,47 @@
+.lesson-card{
+    display: table;
+    width: 100%;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+
+    &--img{
+       
+        display: table-cell;
+        height: 50px;
+        padding: 10px;
+        border-right: 1px solid #d8d8d8;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .fas{
+            font-size: 40px;
+        }
+    }
+    &--copy{
+     
+        display: table-cell;
+        height: 50px;
+        padding: 10px;
+        font-size: 12px;
+        vertical-align: top;
+    }
+}
+
+
+
+// Testimonial
+
+.testimonial-block{
+
+    &--img{
+
+    }
+
+    &--copy{
+
+    }
+
+}

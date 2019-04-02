@@ -1,0 +1,32 @@
+.quote{
+    &__img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        overflow: hidden; 
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__copy{
+
+        &__title{
+            font-size: 26px;
+            line-height: 30px;
+            text-transform: uppercase;
+        }
+
+        &__intro{
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &__subtitle{
+            font-size: 24px;
+            list-style: 28px;
+        }
+    }
+}
