@@ -33,8 +33,13 @@ body{
 }
 
 
-.logo{
+.corporates-logo{
     display: inline-block;
     height: 50px;
-    background-color: red;
+    text-align: center;
+    // background-color: red;
+    img{
+        height: 100%;
+        display: inline-block;
+    }
 }

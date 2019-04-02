@@ -103,11 +103,30 @@
 <div>
     <div class="container">
         <div class="slider">
-            <div class="logo">A</div>
-            <div class="logo">B</div>
-            <div class="logo">C</div>
-            <div class="logo">D</div>
-            <div class="logo">E</div>
+            <div class="corporates-logo">
+                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92w/635981/32598/WPP.png" alt="">
+            </div>
+            <div class="corporates-logo">
+                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q91w/635981/32568/Absa.png" alt="">
+            </div>
+            <div class="corporates-logo">
+                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92p/635981/32592/TBWA.png" alt="">
+            </div>
+            <div class="corporates-logo">
+                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q929/635981/32580/Ogilvy.png" alt="">
+            </div>
+            <div class="corporates-logo">
+                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92t/635981/32596/TFG.png" alt="">
+            </div>
+            <div class="corporates-logo">
+                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92h/635981/32584/Primedia.png" alt="">
+            </div>
+            <div class="corporates-logo">
+                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q927/635981/32578/MTN.png" alt="">
+            </div>
+            <div class="corporates-logo">
+                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92k/635981/32588/Publicis.png" alt="">
+            </div>
         </div>
     </div>
 </div>
@@ -130,7 +149,11 @@
 $(".slider").slick({
 
 // normal options...
-infinite: false,
+infinite: true,
+slidesToShow: 5,
+autoplay: true,
+autoplaySpeed: 2000,
+
 
 // the magic
 responsive: [{
@@ -146,15 +169,20 @@ responsive: [{
     breakpoint: 600,
     settings: {
       slidesToShow: 2,
-      dots: true
+      dots: false
     }
 
   }, {
 
-    breakpoint: 300,
-    settings: "unslick" // destroys slick
-
+    breakpoint: 480,
+    // settings: "unslick" // destroys slick
+    settings: {
+      slidesToShow: 1,
+      dots: false
+    }
   }]
+
+
 });
 
 
