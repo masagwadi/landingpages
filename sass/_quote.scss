@@ -1,9 +1,16 @@
 .quote{
+    max-width: 500px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     &__img{
+        display: inline-block;
         height: 100px;
         width: 100px;
         border-radius: 50%;
         overflow: hidden; 
+        float: right;
+        margin-top: 30px;
         img{
             height: 100%;
             width: 100%;
@@ -13,20 +20,49 @@
 
     &__copy{
 
+        display: inline-block;
+        max-width: 400px;
+        padding: 10px;
+
         &__title{
-            font-size: 26px;
-            line-height: 30px;
+            font-size: 20px;
+            line-height: 24px;
             text-transform: uppercase;
+            font-weight: bold;
         }
 
         &__intro{
             font-size: 14px;
             line-height: 16px;
+            max-width: 300px;
+            padding-left: 40px;
+            padding-right: 30px;
+            position: relative;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            &:before{
+                font-family: "FontAwesome";
+                content: '\f10d';
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 30px;
+            }
+            &:after{
+                font-family: "FontAwesome";
+                content: '\f10e';
+                position: absolute;
+                bottom: -10px;
+                right: 0;
+                font-size: 30px;
+            }
         }
 
         &__subtitle{
-            font-size: 24px;
-            list-style: 28px;
+            font-size: 18px;
+            list-style: 20px;
+            margin: 30px 0 0 0;
+
         }
     }
 }
