@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400,400i,700,700i|Sintony:400,700" rel="stylesheet"><!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" rel="stylesheet"> -->
   
+    <!-- Slick Slider -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+
     <link href="css/style.css" rel="stylesheet">
 
     <title>R&Y Template Components</title>
@@ -62,30 +69,97 @@
     </div>
 <!-- # end of row -->
 
+</div>
 
+<div>
 <!-- #row -->
 
-<div class="row pad-x-5">
-    <div class="col-sm-12">
-        <div class="quote">
-            <div class="quote__img">
-                <img src="https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2019/02/Stephen-Sandmann.jpeg" alt="">
+<!-- ##### Quote Block -->
+<div class="quote-bg">
+
+    <div class="container">
+        <div class="row pad-x-5">
+            <div class="col-sm-12">
+                <div class="quote">
+                    <div class="quote__img">
+                        <img src="https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2019/02/Stephen-Sandmann.jpeg" alt="">
+                    </div>
+                    <div class="quote__copy">
+                        <h1 class="quote__copy__title">Sagwadi Maluleke</h1>
+                        <p class="quote__copy__intro">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis nihil, sequi adipisci aut nam inventore.</p>
+                        <h2 class="quote__copy__subtitle">Lorem, ipsum dolor.</h2>
+                    </div>
+                </div>
             </div>
-            <div class="quote__copy">
-                <h1 class="quote__copy__title">Sagwadi Maluleke</h1>
-                <p class="quote__copy__intro">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis nihil, sequi adipisci aut nam inventore.</p>
-                <h2 class="quote__copy__subtitle">Lorem, ipsum dolor.</h2>
-            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- # END of Quote block # -->
+
+<!-- ##### logo sliders  -->
+
+<div>
+    <div class="container">
+        <div class="slider">
+            <div class="logo">A</div>
+            <div class="logo">B</div>
+            <div class="logo">C</div>
+            <div class="logo">D</div>
+            <div class="logo">E</div>
         </div>
     </div>
 </div>
 
+<!-- # END of LOgo Sliders  -->
 
 <!-- # edn of row -->
 
 </div>
 
 
+
+<!-- Scripts  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+
+<script>
+
+$(".slider").slick({
+
+// normal options...
+infinite: false,
+
+// the magic
+responsive: [{
+
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 3,
+      infinite: true
+    }
+
+  }, {
+
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 2,
+      dots: true
+    }
+
+  }, {
+
+    breakpoint: 300,
+    settings: "unslick" // destroys slick
+
+  }]
+});
+
+
+
+</script>
 
 </body>
 </html>

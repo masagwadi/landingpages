@@ -359,6 +359,17 @@ html {
   padding: 5px;
 }
 
+body {
+  font-family: "Lato", sans-serif;
+  padding-bottom: 300px;
+}
+
+.logo {
+  display: inline-block;
+  height: 50px;
+  background-color: red;
+}
+
 .lesson-card {
   display: table;
   width: 100%;
@@ -416,6 +427,7 @@ html {
   line-height: 24px;
   text-transform: uppercase;
   font-weight: bold;
+  font-family: "Lato", helvetica, arial, sans-serif;
 }
 .quote__copy__intro {
   font-size: 14px;
@@ -424,7 +436,7 @@ html {
   padding-left: 40px;
   padding-right: 30px;
   position: relative;
-  margin-top: 40px;
+  margin-top: 20px;
   padding-bottom: 10px;
 }
 .quote__copy__intro:before {
@@ -444,9 +456,14 @@ html {
   font-size: 30px;
 }
 .quote__copy__subtitle {
+  margin-top: 20px;
   font-size: 18px;
-  list-style: 20px;
-  margin: 30px 0 0 0;
+  line-height: 20px;
+  font-family: "Lato", helvetica, arial, sans-serif;
+}
+
+.quote-bg {
+  background-color: #d8d8d8;
 }
 
 /*# sourceMappingURL=style.css.map */
