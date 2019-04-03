@@ -10,6 +10,10 @@
         transition: 250ms ease all;
     }
 
+    &--full{
+        width: 100%;
+    }
+
     &--yellow{
         background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 92% 10px #f1ce00;
         border: 2px solid #f1ce00;

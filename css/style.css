@@ -359,6 +359,11 @@ html {
   box-sizing: inherit;
 }
 
+p {
+  font-size: 12px;
+  list-style: 16px;
+}
+
 .row.no-pad > [class*=col-] {
   padding-right: 0;
   padding-left: 0;
@@ -605,6 +610,9 @@ body {
   text-decoration: none;
   transition: 250ms ease all;
 }
+.cta-btn--full {
+  width: 100%;
+}
 .cta-btn--yellow {
   background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 92% 10px #f1ce00;
   border: 2px solid #f1ce00;
@@ -626,6 +634,7 @@ body {
 
 .form-block {
   max-width: 300px;
+  z-index: 999;
   min-width: 300px;
 }
 .form-block__title {
