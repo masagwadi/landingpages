@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*********************
+BREAKPOINTS
+*********************/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -396,6 +399,16 @@ body {
   padding: 10px;
 }
 
+/* Hero background image  */
+.highlight {
+  padding: 50px 20px;
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2019/03/RY-online-courses-bg-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 5px solid #da2128;
+}
+
 .lesson-card {
   display: table;
   width: 100%;
@@ -643,9 +656,16 @@ body {
   color: #ffffff;
   transition: 250ms ease all;
 }
+@media (max-width: 480px) {
+  .form-block {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 .form-info {
   padding: 10px;
+  background-color: #ffffff;
 }
 
 .form-top {

@@ -407,7 +407,7 @@ $(window).bind('scroll', function() {
     // console.log( prviousElementTopPosition ); 
 
     // For desktop
-    if(!isMobile){
+    if(isMobile){
         if(FormtopPosition < 0 && !formfixed ){
             // fix the form block to the top
             $('.form-block').addClass('form-top');
@@ -428,13 +428,6 @@ $(window).bind('scroll', function() {
             // add the height of the form block as body padding
             $('body').css('margin-top', 0);
         }
-    }
-
-
-    // for Mobile
-
-    if(isMobile){
-        
     }
     
     
