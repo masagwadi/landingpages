@@ -404,28 +404,39 @@ $(window).bind('scroll', function() {
     var FormtopPosition = formTop - scrollTop + heightOfPrev + formBlockHeight + 30;
     var prviousElementTopPosition = formTop - scrollTop + heightOfPrev;
     var formfixed = $('.form-block').hasClass('form-top');
-    console.log( prviousElementTopPosition ); 
+    // console.log( prviousElementTopPosition ); 
 
-    if(FormtopPosition < 0 && !formfixed && !isMobile ){
-        // fix the form block to the top
-        $('.form-block').addClass('form-top');
-        
-        // Collapse the form info
-        $('.form-info').hide();
+    // For desktop
+    if(!isMobile){
+        if(FormtopPosition < 0 && !formfixed ){
+            // fix the form block to the top
+            $('.form-block').addClass('form-top');
+            
+            // Collapse the form info
+            $('.form-info').hide();
 
-        // add the height of the form block as body padding
-        $('body').css('margin-top',formBlockHeight);
+            // add the height of the form block as body padding
+            $('body').css('margin-top',formBlockHeight);
 
-    }else if(prviousElementTopPosition > 0 && formfixed && !isMobile) {
-        // release the form block from the top
-        $('.form-block').removeClass('form-top');
+        }else if(prviousElementTopPosition > 0 && formfixed ) {
+            // release the form block from the top
+            $('.form-block').removeClass('form-top');
 
-        // show the form info
-        $('.form-info').show();
+            // show the form info
+            $('.form-info').show();
 
-        // add the height of the form block as body padding
-        $('body').css('margin-top', 0);
+            // add the height of the form block as body padding
+            $('body').css('margin-top', 0);
+        }
     }
+
+
+    // for Mobile
+
+    if(isMobile){
+        
+    }
+    
     
 });
 
