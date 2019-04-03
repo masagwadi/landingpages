@@ -1,0 +1,16 @@
+.form-block{
+    max-width: 300px;
+    &__title{
+        padding: 10px;
+    background-color: red;
+    transition: 250ms ease all;
+    }
+}
+
+
+.form-top{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    transition: 250ms ease all;
+}

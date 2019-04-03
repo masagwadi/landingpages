@@ -1,0 +1,31 @@
+.cta-btn{
+    padding: 15px 80px 15px 30px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    transition: 250ms ease all;
+    &:hover{
+        text-decoration: none;
+        transition: 250ms ease all;
+    }
+
+    &--yellow{
+        background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 92% 10px #f1ce00;
+        border: 2px solid #f1ce00;
+        color: #ffffff;
+        &:hover{
+            color: #000000;
+            background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover.png) no-repeat 92% 10px #ffffff;
+        }
+    }
+
+    &--red{
+        background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 92% 10px #da2128;
+        border: 2px solid #da2128;
+        color: #ffffff;
+        &:hover{
+            color: #000000;
+            background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover-red.png) no-repeat 92% 10px #ffffff;
+        }
+    }
+}

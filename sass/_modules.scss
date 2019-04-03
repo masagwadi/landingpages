@@ -1,0 +1,12 @@
+.module-block{
+    &__title{
+        font-weight: bold;
+        font-size: 18px;
+        list-style: 20px;
+        margin-bottom: 5px;
+    }
+    &__intro{
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

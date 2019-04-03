@@ -45,3 +45,61 @@
     }
 
 }
+
+
+// Endorsements 
+
+.endorsers{
+    display: inline-block;
+    width: 150px;
+    &__title{
+        vertical-align: top;
+        padding-top: 13px;
+        padding-right: 35px;
+        display: inline-block;
+    }
+}
+
+
+// # video Card
+
+.video-card{
+    &__view{
+        border: 1px solid #d8d8d8;
+        width: 100%;
+        height: 300px;
+        position: relative;
+        margin-bottom: 30px;
+        iframe{
+            width: 100%;
+            height: 300px;
+            display: none;
+        }
+    }
+
+    &__place-holder{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__play{
+        height: 35px;
+        width: 35px;
+        display: block;
+        position: absolute;
+        right: 15px;
+        bottom: -17.5px;
+        cursor: pointer;
+
+        background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 80% 2px #da2128;
+        border-radius: 50%;
+    }
+
+    &__intro{
+        text-align: center;
+        padding: 10px 50px 10px 50px;
+        font-size: 12px;
+        list-style: 16px;
+    }
+}
