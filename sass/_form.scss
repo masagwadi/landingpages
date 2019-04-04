@@ -1,7 +1,17 @@
+.form-block-container{
+    position: absolute;
+    max-width: 300px;
+    border: 1px solid $black;
+    overflow: hidden;
+    background-color: $white;
+}
+
 .form-block{
     max-width: 300px;
     z-index: 999;
     min-width: 300px;
+
+
     &__title{
         padding: 10px;
     background-color: $red;

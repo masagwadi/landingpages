@@ -1,0 +1,24 @@
+.row-list{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+        padding: 10px;
+        border: 1px solid $lightgray;
+        border-bottom: 0;
+        font-size: 14px;
+        line-height: 16px;
+
+        &:last-child{
+            border-bottom: 1px solid $lightgray;
+        }
+
+        &:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        &:hover{
+            background-color: $white;
+        }
+    }
+}
