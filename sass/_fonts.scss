@@ -1,0 +1,64 @@
+ /* Font for headlines */
+ h1, h2, h3 {
+    font-family: 'lato', sans-serif;
+   }
+ 
+   /* Font colors and size for headlines */
+   h1 {
+    color: #333;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0;
+    font-family: 'Lato', helvetica, arial, sans-serif;
+    font-weight: 300;
+   }
+   
+   h2 {
+    color: #da2128;
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: normal;
+    margin: 0;
+   }
+
+   h3 {
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFF;
+    margin: 0;
+   }
+
+
+   table.event-details {
+    table-layout:fixed;
+    width:100%;
+    font-size:16px;
+    margin-top:30px;
+    color:#333;
+   }
+   table.event-details i {
+    font-size:30px;
+    padding-right:10px;
+    position:relative;
+    top:5px;
+   }
+
+   table.event-details i {
+    color:#da2128;
+   }
+
+   
+
+.headline-container {
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+}
+
+.headline {
+    padding: 0 0 15px 0;
+}
+
+.description {
+    color: #333;
+    font-size: 15px;
+}
