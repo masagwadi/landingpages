@@ -843,10 +843,11 @@ body {
 }
 
 .profile__img {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
+  width: 80px;
+  height: 80px;
   vertical-align: top;
+  float: left;
+  margin-right: 10px;
 }
 .profile__img img {
   width: 100%;
@@ -855,29 +856,31 @@ body {
 }
 .profile__title {
   vertical-align: top;
-  width: calc(100% - 55px);
-  font-size: 20px;
-  line-height: 24px;
+  width: calc(100% - 95px);
+  font-size: 16px;
+  line-height: 14px;
   font-weight: bold;
-  display: inline-block;
   margin: 0;
-  padding-left: 10px;
+  float: left;
+  margin-bottom: 5px;
 }
 .profile__sub-title {
-  width: calc(100% - 55px);
-  display: inline-block;
-  font-size: 18px;
-  line-height: 20px;
-  margin: 0;
-  vertical-align: top;
-}
-.profile__copy {
+  width: calc(100% - 95px);
   font-size: 14px;
   line-height: 16px;
+  margin: 0;
+  vertical-align: top;
+  float: left;
+  margin-bottom: 5px;
+}
+.profile__copy {
+  font-size: 12px;
+  line-height: 16px;
+  display: inherit;
 }
 
 .graduate, .contributor {
-  padding: 10px;
+  padding: 20px;
 }
 
 .lesson-card {
@@ -941,11 +944,17 @@ body {
   width: 35px;
   display: block;
   position: absolute;
-  right: 15px;
-  bottom: -17.5px;
   cursor: pointer;
   background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 80% 2px #da2128;
   border-radius: 50%;
+}
+.video-card__play--bottom-right {
+  right: 15px;
+  bottom: -17.5px;
+}
+.video-card__play--center {
+  right: calc(50% - 17.5px/2);
+  bottom: calc(50% - 17.5px);
 }
 .video-card__intro {
   text-align: center;
@@ -997,10 +1006,6 @@ body {
   top: 0;
   right: 0;
   font-size: 15px;
-}
-
-.quotes-block {
-  max-width: 500px;
 }
 
 .quote {

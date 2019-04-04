@@ -61,7 +61,7 @@ $(".endorsers").slick({
 // Slick slider for the quotes 
 $(".quotes-block").slick({
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 2,
     autoplay: true,
     autoplaySpeed: 2000,
 
@@ -111,7 +111,7 @@ $(window).bind('scroll', function() {
             // add the height of the form block as body padding
             $('.form-block-container').css('padding-top',formBlockHeight + 30);
 
-        }else if(prviousElementTopPosition > 0 && formfixed ) {
+        }else if((prviousElementTopPosition) > 0 && formfixed ) {
             // release the form block from the top
             $('.form-block').removeClass('form-top').css({'right': 'auto'});
 
