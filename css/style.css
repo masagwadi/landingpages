@@ -361,7 +361,7 @@ template {
   color: #da2128;
 }
 
-@media (min-width: 768px) and (max-width: 800px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .slider, .slick-slider {
     max-width: calc(100% - 40px);
     margin-left: auto;
@@ -536,7 +536,7 @@ body {
     background-color: #ffffff;
   }
 }
-@media (min-width: 768px) and (max-width: 800px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .logo {
     text-align: center;
     padding: 10px;
@@ -554,7 +554,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (max-width: 800px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .full-on-tab {
     width: 100%;
   }
@@ -690,7 +690,7 @@ body {
   max-width: 500px;
   padding-top: 60px;
 }
-@media (min-width: 768px) and (max-width: 800px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .quote {
     margin-left: auto;
     margin-right: auto;
@@ -855,7 +855,7 @@ body {
   overflow: hidden;
   background-color: #ffffff;
 }
-@media (min-width: 768px) and (max-width: 800px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .form-block-container {
     position: relative;
     min-width: 100%;
@@ -877,7 +877,7 @@ body {
   z-index: 999;
   min-width: 350px;
 }
-@media (min-width: 768px) and (max-width: 800px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .form-block {
     min-width: 100%;
     max-width: 100%;
@@ -927,7 +927,7 @@ body {
   padding: 10px;
   background-color: #ffffff;
 }
-@media (min-width: 768px) and (max-width: 800px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .form-info {
     padding: 0;
     width: 100%;
@@ -945,12 +945,12 @@ body {
     min-height: 100vh;
   }
 }
-@media (min-width: 768px) and (max-width: 800px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .form-top.open .form-info {
     min-height: 100vh;
   }
 }
-@media (min-width: 768px) and (max-width: 800px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .form-top {
     top: 0;
     right: 0 !important;
