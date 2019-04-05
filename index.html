@@ -1,628 +1,687 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400,400i,700,700i|Sintony:400,700"
+        rel="stylesheet"><!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+    <!-- <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" rel="stylesheet"> -->
 
-  <!-- original Created By: Jenna Molby | www.jennamolby.com | Customised by Red & Yellow -->
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400,400i,700,700i|Sintony:400,700" rel="stylesheet"><!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" rel="stylesheet">
-  <base href="http://go.redandyellow.co.za">
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <meta content="Red & Yellow | Online Short Courses | Digital Marketing" name="description">
-  <title>%%title%%</title>
-  <style type="text/css">
-       /* --------------------------
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-  EDIT THESE COLORS BELOW TO CUSTOMIZE 
-  THE TEMPLATE TO MEET YOUR BRAND GUIDELINES
+    <!-- Slick Slider -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
 
-  --------------------------*/
+    <link href="css/style.css" rel="stylesheet">
 
-
-  /* Font for headlines */
-  h1, h2, h3 {
-   font-family: 'lato', sans-serif;
-  }
-
-  /* Font colors and size for headlines */
-  h1 {
-   color: #333;
-   font-size: 40px;
-   line-height: 48px;
-   margin: 0;
-   font-family: 'Lato', helvetica, arial, sans-serif;
-   font-weight: 300;
-  }
-  
-  .headline-container {
-   background: rgba(255, 255, 255, 0.8); 
-   padding: 10px;
-  }
-  
-  h2 {
-   color: #da2128;
-   font-size: 22px;
-   line-height: 35px;
-   font-weight: normal;
-   margin: 0;
-  }
-  h3 {
-   font-size: 20px;
-   line-height: 28px;
-   color: #FFF;
-   margin: 0;
-  }
-
- .speakers h3 {
-   font-size:15px;
-   font-weight:500;
-   color:#333333;
-   margin:0;
-   padding:0;
-   line-height:25px;
-  }
- .speakers h4 {
-   font-size:12px;
-   font-weight:500;
-   color:#333333;
-   margin:0;
-   line-height:15px;
-  }
-  /* Font colors, size and type for body copy */
-  body {
-   font-family: 'Lato', sans-serif;
-   color: #333333;
-   font-size: 15px;
-   line-height: 25px;
-   background-color: #f4f4f4;
-  }
-
-  /* Form background color */
-  form.form {
-   background-color: #FFF;
-  }
-  /* Hero background image  */
-  .highlight {
-   padding: 50px 20px;
-   background:url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2019/03/RY-online-courses-bg-1.jpg);
-     background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  }
-  /* Header background color */
-  .header {
-   background-color: #FFF;
-  }
-  /* Body Sub Header Color and font size */
-  .page-body h3 {
-   color: #da2128;
-   font-size: 20px;
-  }
-  /* Form Header background color */
-  .form-header {
-   background: #f1ce00;
-  }
-  table.event-details i {
-   color:#da2128;
-  }
-  #modules {
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#modules td, #modules th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#modules tr:nth-child(even){background-color: #f2f2f2;}
-
-#modules tr:hover {background-color: #fff;}
-
-#modules th {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: left;
-  background-color: #f1ce00;
-  color: white;
-}
-     .block-two.bgcolour { background-color: #fafafa; }
-     
-            /* Enable strong control over editable table cell widths */
-            table.editable-table {
-                table-layout: fixed;
-                width: 100%;
-            }
-
-            /* Set default editable table cell spacing & widths */
-            table.editable-table.3col td {
-                padding:0px 15px;
-                width:33%;
-            }
-  /* --------------------------
-
-  WARNING: EDITING THE BELOW CSS MIGHT
-  BREAK THE TEMPLATE. 
-
-  --------------------------*/
-  .highlight {
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-  }
-  .logo {
-   padding: 0 0 10px 0;
-  }
-  .header {
-   padding: 20px 10px;
-  }
-  .headline {
-   padding: 0 0 15px 0;
-  }
-  .description {
-   color: #333;
-   font-size: 15px;
-  }
-  .page-body {
-   padding: 35px 0;
-  }
-  .page-body h3 {
-   padding-bottom: 10px;
-  }
-  .form-container {
-   position: relative;
-  }
-  .form-container-inner {
-   position: absolute;
-   top: 50px;
-   border: 1px solid #333;
-   background: white;
-  }
-  .form-header {
-   padding: 20px;
-   text-align: center;
-  }
-  .speakers-container h2 {
-   text-align:center;
-   margin-top:25px;
-  }
-    .speakers {
-   margin-top:20px;
-  }
-  .speakers td {
-   padding: 0px 10px 10px 15px;
-  }
-  .speakers img {
-   margin-right:8px;
-   border-radius:50%;
-   margin-left:5px;
-   -moz-border-radius:50%;
-   -webkit-border-radius:50%;
-   float:left;
-  }
-  .footer {
-   padding: 35px 0 30px 0;
-   font-size: 11px;
-   color: #9E9E9E;
-   line-height: 18px;
-   font-family: 'Open Sans', sans-serif;
-   background-color: #FFF;
-  }
-  .footer .border-top {
-   border-top: solid 1px #E0E0E0;
-   padding-top: 20px;
-  }
-  ul.social {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-  }
-  ul.social li {
-   display: inline-block;
-   padding: 5px;
-  }
-  ul.social i {
-   color: #da2128;
-   font-size: 20px;
-  }
-
-
-
-  .asset-image img {
-   width: 100%;
-  }
-  .desktop-hide {
-   display: none;
-  }
-  table.event-details {
-   table-layout:fixed;
-   width:100%;
-   font-size:16px;
-   margin-top:30px;
-   color:#333;
-  }
-  table.event-details i {
-   font-size:30px;
-   padding-right:10px;
-   position:relative;
-   top:5px;
-  }
-
-  @media only screen and (max-width: 480px) {
-   ul.social {
-     text-align: center !important;
-   }
-   .copyright {
-     text-align: center;
-     padding-bottom: 10px;
-   }
-   form.form input[type=submit] {
-     width: 100%;
-     padding-top: 12px;
-     padding-bottom: 12px;
-         background-color: #da2128;
-   }
-   h1 {
-     font-size: 30px;
-     line-height: 35px;
-   }
-   h2 {
-     font-size: 22px;
-     line-height: 28px;
-   }
-   .headline {
-     padding-bottom: 15px;
-   }
-  }
-
-  @media only screen and (max-width: 668px) {
-   .asset-image {
-     width: 100%;
-     text-align: center;
-     padding-bottom: 25px;
-   }
-   .asset-image img {
-     max-width: 300px;
-   }
-   .headline-container {
-     width: 90%;
-     margin: 0 auto;
-     float: none;
-     text-align: center;
-   }
-   .logo {
-     text-align: center;
-   }
-  }
-
-  @media only screen and (max-width: 992px) {
-   .form-container, .form-container-inner {
-     position: static;
-   }
-   .form-container {
-     padding-top: 25px;
-   }
-  }
-
-  /* Pardot Form Styles */
-
-  body form.form {
-   padding: 20px;
-   margin:0;
-  }
-  body form.form p label {
-   color: #333333 !important;
-   display: block;
-   margin-bottom: 2px !important;
-   font-size: 15px;
-   line-height: 18px;
-   font-family: 'Open Sans', sans-serif;
-   font-weight: normal;
-   text-align:left;
-   width:auto;
-  }
-  body form.form p.form-field {
-   margin-bottom: 10px;
-  }
-  body form.form input[type=text], form.form textarea {
-   width: 100%;
-   border: solid 1px #E0E0E0;
-   background-color: #FFF;
-   padding: 5px !important;
-   font-size: 15px;
-   font-family: 'Lato', sans-serif;
-  }
-  body form.form input[type=text]:focus, form.form textarea:focus, form.form select:focus {
-   outline: none;
-  }
-  body form.form input[type=submit] {
-   background-color: #da2128;
-   border: 0;
-   color: #FFF;
-   font-size: 15px;
-   font-family: 'Lato', sans-serif;
-   padding: 10px 25px !important;
-   margin-right:0 !important;
-       margin-bottom: 5px !important;
-   margin-left:0 !important;
-   border-radius: 3px;
-  }
-  body form.form p.submit {
-   text-align: center;
-   margin:0 !important;
-  }
-  body form.form label.inline {
-   display: inline-block !important;
-   padding-left: 8px;
-   font-size: 13px;
-  }
-  body form.form textarea {
-   height: 75px;
-  }
-  body form.form select {
-   width: 100%;
-   border: solid 1px #E0E0E0;
-   background-color: #ccc;
-   padding: 5px !important;
-   font-size: 15px;
-   border-radius: 0;
-   -moz-border-radius: 0;
-   -webkit-border-radius: 0;
-   font-family: 'Merriweather', serif;
-   -moz-appearance: none;
-   -webkit-appearance: none;
-   appearance: none;
-   background-position: right center;
-   background-repeat: no-repeat;
-   background-size: 1ex;
-   background-origin: content-box;
-   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnMiIKICAgdmlld0JveD0iMCAwIDM1Ljk3MDk4MyAyMy4wOTE1MTgiCiAgIGhlaWdodD0iNi41MTY5Mzk2bW0iCiAgIHdpZHRoPSIxMC4xNTE4MTFtbSI+CiAgPGRlZnMKICAgICBpZD0iZGVmczQiIC8+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNyI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAyLjAxNDUxLC00MDcuMTIyMjUpIgogICAgIGlkPSJsYXllcjEiPgogICAgPHRleHQKICAgICAgIGlkPSJ0ZXh0MzMzNiIKICAgICAgIHk9IjYyOS41MDUwNyIKICAgICAgIHg9IjI5MS40Mjg1NiIKICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjQwcHg7bGluZS1oZWlnaHQ6MTI1JTtmb250LWZhbWlseTpzYW5zLXNlcmlmO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICB4bWw6c3BhY2U9InByZXNlcnZlIj48dHNwYW4KICAgICAgICAgeT0iNjI5LjUwNTA3IgogICAgICAgICB4PSIyOTEuNDI4NTYiCiAgICAgICAgIGlkPSJ0c3BhbjMzMzgiPjwvdHNwYW4+PC90ZXh0PgogICAgPGcKICAgICAgIGlkPSJ0ZXh0MzM0MCIKICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZTo0MHB4O2xpbmUtaGVpZ2h0OjEyNSU7Zm9udC1mYW1pbHk6Rm9udEF3ZXNvbWU7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpGb250QXdlc29tZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjFweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIj4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzMzQ1IgogICAgICAgICBzdHlsZT0iZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxIgogICAgICAgICBkPSJtIDIzNy41NjY5Niw0MTMuMjU1MDcgYyAwLjU1ODA0LC0wLjU1ODA0IDAuNTU4MDQsLTEuNDczMjIgMCwtMi4wMzEyNSBsIC0zLjcwNTM1LC0zLjY4MzA0IGMgLTAuNTU4MDQsLTAuNTU4MDQgLTEuNDUwOSwtMC41NTgwNCAtMi4wMDg5MywwIEwgMjIwLDQxOS4zOTM0NiAyMDguMTQ3MzIsNDA3LjU0MDc4IGMgLTAuNTU4MDMsLTAuNTU4MDQgLTEuNDUwODksLTAuNTU4MDQgLTIuMDA4OTMsMCBsIC0zLjcwNTM1LDMuNjgzMDQgYyAtMC41NTgwNCwwLjU1ODAzIC0wLjU1ODA0LDEuNDczMjEgMCwyLjAzMTI1IGwgMTYuNTYyNSwxNi41NDAxNyBjIDAuNTU4MDMsMC41NTgwNCAxLjQ1MDg5LDAuNTU4MDQgMi4wMDg5MiwwIGwgMTYuNTYyNSwtMTYuNTQwMTcgeiIgLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=");
-  }
-  body .red-color, 
-  body form.form p.error, 
-  body form.form span.error, 
-  body form.form div.error, 
-  body form.form p.error label {
-     margin: 0;
-     text-align: left;
-
-   }
-  </style>
-  
+    <title>R&Y Template Components</title>
 </head>
+
 <body>
 
-  <div class="container form-position">
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-8 form-container">
-        <div class="form-container-inner">
-          <div class="form-header">
-            <h3 pardot-region="form-header">Save Your Spot</h3>
-          </div>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43748615-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <div>
 
-  gtag('config', 'UA-43748615-2');
-</script>
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
- fbq('init', '755081827958842'); 
-fbq('track', 'PageView');
-</script>
-<noscript>
- <img height="1" width="1" 
-src="https://www.facebook.com/tr?id=755081827958842&ev=PageView
-&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
-          %%content%%
-<div class="row speakers-container">
-            <div class="col-md-12">
-              <h2 pardot-region="speakers-header">Speakers</h2>
-              <div pardot-region="speakers">
-    <table class="speakers">
-      <tr>
-        <td><img src="https://placeholdit.co//i/100x100?&bg=CCCCCC&fc=333333&text=SPEAKER"></td>
-        <td>
-          <h3>Speaker Name</h3>
-          <h4><i>Job title, Company Name</i></h4>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="https://placeholdit.co//i/100x100?&bg=CCCCCC&fc=333333&text=SPEAKER"></td>
-        <td>
-          <h3>Speaker Name</h3>
-          <h4><i>Job title, Company Name</i></h4>
-        </td>
-      </tr>
-    </table>
-    
-  </div>              <h2 pardot-region="creators-header">Speakers</h2>
-              <div pardot-region="creators">
-    <table class="speakers">
-      <tr>
-        <td><img src="https://placeholdit.co//i/100x100?&bg=CCCCCC&fc=333333&text=SPEAKER"></td>
-        <td>
-          <h3>Speaker Name</h3>
-          <h4><i>Job title, Company Name</i></h4>
-        </td>
-      </tr>
-      <tr>
-        <td><img src="https://placeholdit.co//i/100x100?&bg=CCCCCC&fc=333333&text=SPEAKER"></td>
-        <td>
-          <h3>Speaker Name</h3>
-          <h4><i>Job title, Company Name</i></h4>
-        </td>
-      </tr>
-    </table>
-    
-  </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="highlight">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="logo" pardot-region="Logo">
-                <a href="#"><img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=lOGO&w=220&h=65"></a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 headline-container">
-              <div class="headline">
-                <h2 pardot-region="event-type">Webinar</h2>
-                <h1 pardot-region="event-title">Insert Your Webinar Title Here</h1>
-              </div>
-              <div class="description" pardot-region="event-details">
-                <p>Enean euismod erat sed lectus bibendum iaculis. Aliquam aliquet, sem sed egestas rutrum, libero erat dignissim sapien, nec consectetur mauris neque id tortor. Curabitur a libero aliquam, elementum erat sed, pretium enim. Nunc erat est, ultrices ornare lorem ut, efficitur scelerisque ex. Aenean congue nisl ut tellus facilisis bibendum. Cras mollis efficitur mi, at maximus elit tempus ac. Mauris hendrerit sollicitudin urna, id posuere purus.</p>
-              </div>
-                <table class="event-details">
-                  <tr>
-                    <td><i class="fas fa-calendar-alt"></i> <span pardot-region="event-date">October 20th, 2018</span></td>
-                    <td><i class="fas fa-clock"></i> <span pardot-region="event-time">10am PST | 1pm EST</span></td>
-                    <td><i class="fas fa-map-marker-alt"></i> <span pardot-region="event-location">Your Desk!</span></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="page-body">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8" pardot-region="event-description">
-          <p>Aenean egestas placerat sapien, eu tincidunt ligula blandit ut. Aenean tincidunt lacus et felis ultricies porta. Quisque sit amet purus ut orci elementum semper vitae in nunc. Sed ullamcorper consequat tellus. Sed vitae pulvinar arcu. Aenean vitae mi ante. Ut ultricies, turpis ac luctus fermentum, tellus erat consectetur mi, eu ultricies arcu magna in erat. Vestibulum porta massa eu euismod maximus.</p>
-          <p>Aenean euismod erat sed lectus bibendum iaculis. Aliquam aliquet, sem sed egestas rutrum, libero erat dignissim sapien, nec consectetur mauris neque id tortor. Curabitur a libero aliquam, elementum erat sed, pretium enim. Nunc erat est, ultrices ornare lorem ut, efficitur scelerisque ex. Aenean congue nisl ut tellus facilisis bibendum. Cras mollis efficitur mi, at maximus elit tempus ac. Mauris hendrerit sollicitudin urna, id posuere purus.</p>
-          <h3>Key learning objectives:</h3>
-          <ul>
-            <li>Maecenas feugiat felis erat.</li>
-            <li>Phasellus vel auctor massa. Fusce semper elit vel mi pharetra, rutrum dictum purus sodales.</li>
-            <li>In volutpat molestie urna, eu hendrerit risus congue eu. Maecenas condimentum vehicula pretium.</li>
-            <li>Praesent odio sapien, gravida a molestie a, dignissim a libero.</li>
-            <li>Ut tempor consequat tortor, ac dapibus erat mollis quis.</li>
-            <li>Nam a consectetur arcu.</li>
-          </ul>
-        </div>
-        <div class="col-md-4"></div>
-      </div>
-    </div>
-  </div>
-  <div class="container speakers" pardot-region="proofpoints" style="background-color:#fff;"></div>
-  <div class="container speakers" pardot-region="blank"></div>
-  
-  <hr>
-    <div class="block-two vpadding bgcolour" >
-        <div class="container" pardot-region="block_two_table"> 
-                <table class="editable-table 3col">
-                    <tr>
-                        <td class="hpadding">
-                            <h3>Onboarding</h3>
-                            <p>Talk to one of our experts today on strategies for successful onboarding and for getting the most out of your investment.</p>
-                        </td>
-                        <td class="hpadding">
-                            <h3>Customization</h3>
-                            <p>Not getting the most value out of your current platform? Our experts will share best practices based on your objective.</p>
-                        </td>
-                        <td class="hpadding">
-                            <h3>Execution</h3>
-                            <p>Speak to us today to determine if a LenoxSoft consultant may be a good fit to help you manage your platform on an ongoing basis.</p>
-                        </td>
-                    </tr>
-                </table><!-- table -->
-        </div><!-- container -->
-    </div><!-- block-one vpadding -->
+        <!-- Hoghlight start here -->
 
-  
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 copyright" pardot-region="copyright">
-          &copy; 2018 INSERT YOUR COMPANY NAME HERE<br>
-          INSERT YOUUR COMPANY ADDRESS HERE
+        <div class="highlight">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-8 full-on-tab">
+
+                        <div class="logo" pardot-region="Logo">
+                            <a
+                                href="https://www.redandyellow.co.za/?utm_source=Pardot&amp;utm_medium=landing_page&amp;utm_campaign=digital_marketing"><img
+                                    alt=""
+                                    src="http://go.redandyellow.co.za/l/635981/2019-03-01/ptdt/635981/31998/Red_Yellow_25yrs.png"></a>
+                        </div>
+
+                        <div class=" headline-container">
+                            <div class="headline">
+                                <h2 pardot-region="event-type" class="event-type" data-id="3220">Online learning from an accredited
+                                    institution</h2>
+                                <h1 pardot-region="event-title" class="event-title" data-id="3222">DIGITAL MARKETING COURSE</h1>
+                            </div>
+                            <div class="description" pardot-region="event-details" data-id="3224">
+                                <p>Our flagship Digital Marketing course is endorsed by IAB South Africa and has been
+                                    designed by industry experts to kick-start your digital marketing career. Get all
+                                    the knowledge and practical skills you need to implement an effective digital
+                                    marketing strategy for your brand or business.&nbsp;</p>
+                            </div>
+                            <div class="event-details">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <i class="fas fa-calendar-alt"></i> <span pardot-region="event-date"
+                                        data-id="3226">10 weeks online</span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <i class="fas fa-clock"></i> <span pardot-region="event-time"
+                                        data-id="3284">8
+                                        - 10 hours / week</span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <i class="fas fa-map-marker-alt"></i> <span pardot-region="event-location"
+                                        data-id="3228">Online Learning</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- THE FORM -->
+
+                    <div class="col-sm-4 plx30 full-on-tab">
+
+                        <!-- this need to be here so that the form have a reference point as it changes positions -->
+                        <div></div>
+
+                        <div class="form-block-container">
+                            <div class="form-block">
+                                <div class="form-block__title yellow">
+                                    GET MORE INFORMATION
+                                </div>
+                                <!-- form Info Block -->
+                                <div class="form-info">
+                                    <form accept-charset="UTF-8" method="post"
+                                        action="http://go.redandyellow.co.za/digital-marketing-course" class="form"
+                                        id="pardot-form">
+
+                                        <style type="text/css">
+                                            form.form p label {
+                                                color: #333333;
+                                                font-family: Helvetica, Arial, sans-serif;
+                                                float: none;
+                                                text-align: left;
+                                                line-height: 1em;
+                                                width: auto;
+                                            }
+
+                                            form.form p.submit {
+                                                margin-left: 5px;
+                                            }
+
+                                            form.form p.no-label {
+                                                margin-left: 50px;
+                                            }
+
+                                            form.form span.value {
+                                                margin-left: 0px;
+                                            }
+
+                                            form.form p span.description {
+                                                margin-left: 0px;
+                                            }
+
+                                            form.form p.required label,
+                                            form.form span.required label {
+                                                background-position: top left;
+                                                background: none;
+                                                padding-left: 0px;
+                                            }
+
+                                            form.form .pd-checkbox .value span {
+                                                display: block !important;
+                                            }
+
+                                            form.form .pd-radio .value span {
+                                                display: block !important;
+                                            }
+                                        </style>
+                                        <p class="form-field  first_name pd-text required required-custom    ">
+
+                                            <label class="field-label" for="635981_19552pi_635981_19552">First Name
+                                                *</label>
+
+
+                                            <input type="text" name="635981_19552pi_635981_19552"
+                                                id="635981_19552pi_635981_19552" value="" class="text" size="30"
+                                                maxlength="40" onchange=""
+                                                style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                                        </p>
+                                        <div id="error_for_635981_19552pi_635981_19552" style="display:none"></div>
+
+
+                                        <p class="form-field  last_name pd-text required required-custom    ">
+
+                                            <label class="field-label" for="635981_19554pi_635981_19554">Last Name
+                                                *</label>
+
+
+                                            <input type="text" name="635981_19554pi_635981_19554"
+                                                id="635981_19554pi_635981_19554" value="" class="text" size="30"
+                                                maxlength="80" onchange=""></p>
+                                        <div id="error_for_635981_19554pi_635981_19554" style="display:none"></div>
+
+
+                                        <p class="form-field  email pd-text required required-custom    ">
+
+                                            <label class="field-label" for="635981_19558pi_635981_19558">Email address
+                                                (that you check often) *</label>
+
+
+                                            <input type="text" name="635981_19558pi_635981_19558"
+                                                id="635981_19558pi_635981_19558" value="" class="text" size="30"
+                                                maxlength="255"
+                                                onchange="piAjax.auditEmailField(this, 635981, 19558, 562044);"></p>
+                                        <div id="error_for_635981_19558pi_635981_19558" style="display:none"></div>
+
+
+                                        <p class="form-field  phone pd-text     ">
+
+                                            <label class="field-label" for="635981_19560pi_635981_19560">Phone
+                                                Number</label>
+
+
+                                            <input type="text" name="635981_19560pi_635981_19560"
+                                                id="635981_19560pi_635981_19560" value="" class="text" size="30"
+                                                maxlength="40" onchange=""></p>
+                                        <div id="error_for_635981_19560pi_635981_19560" style="display:none"></div>
+
+
+                                        <p
+                                            class="form-field  Would_you_like_to_receive_our_weekly_newsletters_ pd-radio     ">
+
+                                            <label class="field-label" for="635981_19590pi_635981_19590">Sign up for our
+                                                weekly newsletter?</label>
+
+
+                                            <span class="value"><span class="" style=""><input type="radio"
+                                                        name="635981_19590pi_635981_19590[]"
+                                                        id="635981_19590pi_635981_19590_187558_187558" value="187558"
+                                                        onchange=""><label class="inline"
+                                                        for="635981_19590pi_635981_19590_187558_187558"> Yes sign me
+                                                        up!</label></span><span class="" style=""><input type="radio"
+                                                        name="635981_19590pi_635981_19590[]"
+                                                        id="635981_19590pi_635981_19590_187560_187560" value="187560"
+                                                        onchange=""><label class="inline"
+                                                        for="635981_19590pi_635981_19590_187560_187560"> No, I don't
+                                                        want career boosting tips</label></span><span class=""
+                                                    style=""><input type="radio" name="635981_19590pi_635981_19590[]"
+                                                        id="635981_19590pi_635981_19590_187562_187562" value="187562"
+                                                        onchange=""><label class="inline"
+                                                        for="635981_19590pi_635981_19590_187562_187562"> I've already
+                                                        signed up</label></span></span>
+
+                                        </p>
+                                        <div id="error_for_635981_19590pi_635981_19590" style="display:none"></div>
+
+
+                                        <p class="form-field  Source_URL pd-hidden  hidden   ">
+
+
+                                            <input type="hidden" name="635981_19692pi_635981_19692"
+                                                id="635981_19692pi_635981_19692" value=""></p>
+                                        <div id="error_for_635981_19692pi_635981_19692" style="display:none"></div>
+
+
+
+
+                                        <p
+                                            style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+                                            <label for="pi_extra_field">Comments</label>
+                                            <input type="text" name="pi_extra_field" id="pi_extra_field"></p>
+
+
+                                        <!-- forces IE5-8 to correctly submit UTF8 content  -->
+                                        <input name="_utf8" type="hidden" value="☃">
+                                        <p class="submit">
+                                            <input type="submit" accesskey="s" value="GET YOUR COURSE INFOPACK"></p>
+                                        <p><em><small>100% <a href="https://www.redandyellow.co.za/privacy-policy/"
+                                                        style="text-decoration:underline;color:#da2128;"
+                                                        target="_top">privacy</a> guaranteed. By filling in this form,
+                                                    you agree to Red &amp; Yellow contacting you about online courses.
+                                                    Your information will never be
+                                                    shared.&nbsp;</small></em><em><small>You can opt-out at
+                                                </small></em><em><small>anytime</small></em><em><small>. We'll miss you
+                                                    though :(&nbsp;</small></em></p>
+
+
+
+
+                                        <script type="text/javascript">
+                                            //<![CDATA[
+
+                                            var anchors = document.getElementsByTagName("a");
+                                            for (var i = 0; i < anchors.length; i++) {
+                                                var anchor = anchors[i];
+                                                if (anchor.getAttribute("href") && !anchor.getAttribute("target")) {
+                                                    anchor.target = "_top";
+                                                }
+                                            }
+
+                                            //]]>
+                                        </script><input type="hidden" name="hiddenDependentFields"
+                                            id="hiddenDependentFields" value="">
+                                    </form>
+                                </div>
+
+                                <!-- End of form Info -->
+                            </div>
+
+                            <!-- Sections below the form -->
+                            <!-- graduate -->
+                            <div class="graduate">
+                                <h2 class=" text-red">What graduates have to say</h2>
+                                <div class="profile">
+                                    <span class="profile__img">
+                                        <img src="https://storage.pardot.com/635981/32004/AlanEdgar.png" alt="">
+                                    </span>
+                                    <h1 class="profile__title ">Alan Edgar</h1>
+                                    <h2 class="profile__sub-title">Executive Creative Director, TBWA</h2>
+                                    <span class="profile__copy">
+                                        <em>"This course has been incredible. I'm going to be able to use all the concepts I've learned in a new business that my wife is starting and excited to see how it will positively impact in practice. Please extend my thanks to all the lecturers and markers."</em>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- contributor -->
+                            <div class="contributor">
+                                <h2 class=" text-red">Meet the course contributor</h2>
+                                <div class="profile">
+                                    <span class="profile__img">
+                                        <img src="https://storage.pardot.com/635981/32004/AlanEdgar.png" alt="">
+                                    </span>
+                                    <h1 class="profile__title ">Rob Stokes</h1>
+                                    <h2 class="profile__sub-title">Entrepreneur and digital marketing guru</h2>
+                                    <span class="profile__copy">
+                                        <em>"Rob Stokes is an entrepreneur with over 20 years of digital marketing experience for some of the biggest brands in the world. In 1999, he foundeaward-winningng digital agency, Quirk, and built it into one of the largest agencies in Africa before selling it to London listed global leader, WPP, in 2014."</em>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-block__cta">
+                                <a href="mailto:registrations@redandyellow.co.za?subject=I%20want%20you%20to%20call%20me%20back"
+                                    class="cta-btn cta-btn--red full"
+                                    onclick="gtag('event', 'Click', { 'event_category': 'Email' });">Request a
+                                    call back</a>
+                            </div>
+                            
+                            <div>
+                                <div class="info-card pad-x20 light-gray-bg">
+                                    <h1 class="info-card__title">Lorem, ipsum dolor.</h1>
+                                    <p class="info-card__intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi aut aperiam maxime, minus mollitia recusandae maiores temporibus non repudiandae nulla ad modi soluta ipsum cupiditate.</p>
+                                    <a href="" class="info-card__cta"></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- END OF THE FORM -->
+
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="col-sm-6 text-right" pardot-region="social-media">
-          <ul class="social">
-            <li>
-              <a href="http://www.facebook.com/redandyellowed" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href="http://www.twitter.com/redandyellowed" target="_blank"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="http://www.instagram.com/redandyellowed" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-              <li>
-              <a href="http://www.instagram.com/redandyellowed" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
-            </li>
-            <li>
-              <a href="https//www.redandyellow.co.za" target="_blank">  <i class="fas fa-globe-africa"></i></a>
-            </li>
-        
-            
-            
-          </ul>
+
+        <!-- highlingt ends here -->
+
+
+        <div class="container mt50">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>Get the Digital Marketing Certificate that guarantees career success. </h2>
+                    <p>In just 10 short weeks and over 8 modules you'll get the practical skills to implement a winning
+                        digital marketing strategy. This course is perfect for anyone wanting to effectively market
+                        their brand or business</p>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="container mt50">
+            <div class="row">
+                <div class="col-sm-8 full-on-tab">
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <div class="info-card pad-x10">
+                                <span class="info-card__icon">
+                                    <i class="fas fa-cogs"></i>
+                                </span>
+                                <h1 class="info-card__title">Lorem, ipsum dolor.</h1>
+                                <p class="info-card__intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Nisi aut aperiam maxime, minus mollitia recusandae maiores temporibus non
+                                    repudiandae nulla ad modi soluta ipsum cupiditate.</p>
+                                <!-- <a href="" class="info-card__cta"></a> -->
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="info-card pad-x10">
+                                <span class="info-card__icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </span>
+                                <h1 class="info-card__title">Lorem, ipsum dolor.</h1>
+                                <p class="info-card__intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Nisi aut aperiam maxime, minus mollitia recusandae maiores temporibus non
+                                    repudiandae nulla ad modi soluta ipsum cupiditate.</p>
+                                <!-- <a href="" class="info-card__cta"></a> -->
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="info-card pad-x10">
+                                <span class="info-card__icon">
+                                    <i class="fas fa-desktop"></i>
+                                </span>
+                                <h1 class="info-card__title">Lorem, ipsum dolor.</h1>
+                                <p class="info-card__intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Nisi aut aperiam maxime, minus mollitia recusandae maiores temporibus non
+                                    repudiandae nulla ad modi soluta ipsum cupiditate.</p>
+                                <!-- <a href="" class="info-card__cta"></a> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="container mt50">
+                <div class="row">
+                    <div class="col-sm-8 full-on-tab">
+                        <h1 class="section-title--sub text-red">Trusted By</h1>
+                        <div class="slider">
+                            <div class="corporates-logo">
+                                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92w/635981/32598/WPP.png"
+                                    alt="">
+                            </div>
+                            <div class="corporates-logo">
+                                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q91w/635981/32568/Absa.png"
+                                    alt="">
+                            </div>
+                            <div class="corporates-logo">
+                                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92p/635981/32592/TBWA.png"
+                                    alt="">
+                            </div>
+                            <div class="corporates-logo">
+                                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q929/635981/32580/Ogilvy.png"
+                                    alt="">
+                            </div>
+                            <div class="corporates-logo">
+                                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92t/635981/32596/TFG.png"
+                                    alt="">
+                            </div>
+                            <div class="corporates-logo">
+                                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92h/635981/32584/Primedia.png"
+                                    alt="">
+                            </div>
+                            <div class="corporates-logo">
+                                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q927/635981/32578/MTN.png"
+                                    alt="">
+                            </div>
+                            <div class="corporates-logo">
+                                <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92k/635981/32588/Publicis.png"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt50">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>Get the Digital Marketing Certificate that guarantees career success. </h2>
+                    <p>In just 10 short weeks and over 8 modules you'll get the practical skills to implement a winning
+                        digital marketing strategy. This course is perfect for anyone wanting to effectively market
+                        their brand or business</p>
+                </div>
+                <div class="col-sm-8 mt50 full-on-tab">
+                    <h1 class="section-title--sub text-red">What you'll learn:</h1>
+                    <div>
+                        <div class="row pad-x-5">
+
+                            <div class="col-sm-6 ">
+                                <div class="lesson-card">
+                                    <span class="lesson-card--img">
+                                        <i class="fas fa-desktop"></i>
+                                    </span>
+                                    <span class="lesson-card--copy">
+                                        Understand the digital customer and design customer experiences
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="lesson-card">
+                                    <span class="lesson-card--img">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </span>
+                                    <span class="lesson-card--copy">
+                                        Understand how to use SEO and copywriting to improve your digital assets
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="lesson-card">
+                                    <span class="lesson-card--img">
+                                        <i class="fas fa-desktop"></i>
+                                    </span>
+                                    <span class="lesson-card--copy">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 mt50 full-on-tab">
+                    <h1 class="section-title--sub text-red">What you'll learn:</h1>
+                    <div>
+                        <ul class="row-list">
+                            <li>A hard-copy of our globally read 6th Edition eMarketing textbook</li>
+                            <li>An industry-sought after Certificate of Completion from Red & Yellow</li>
+                            <li>Original, relevant and constantly updated content</li>
+                            <li>An interactive online learning experience that includes videos, live chat sessions,
+                                forum discussions and more</li>
+                            <li>A team of course coordinators to assist you and Instructional Designers and subject
+                                matter experts to guide and teach.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ##### Quote Block -->
+        <div class="quote-bg mt50">
+
+            <div class="container">
+                <div class="row pad-x-5">
+                    <div class="col-sm-12">
+                        <div class="quotes-block">
+                            <div class="quote">
+                                <div class="quote__img">
+                                    <img src="https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2019/02/Stephen-Sandmann.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="quote__copy">
+                                    <!-- <h1 class="quote__copy__title">Grant Webster</h1> -->
+                                    <p class="quote__copy__intro">Over the course of my career, I have always used Red & Yellow as a first filter for advertising and marketing related hires, looking at the institution’s graduates first. Why? because they are always the ones who had business and commercial understanding over and above the advertising and creative side.</p>
+                                    <h2 class="quote__copy__subtitle">- Grant Webster, former heavy-hitter at Makro, Takealot, Look n Listen, Toy Kingdom, WeFix.</h2>
+                                </div>
+                            </div>
+                            <div class="quote">
+                                <div class="quote__img">
+                                    <img src="https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2019/02/Stephen-Sandmann.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="quote__copy">
+                                    <h1 class="quote__copy__title">Sagwadi Maluleke</h1>
+                                    <p class="quote__copy__intro">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                        elit. Blanditiis nihil, sequi adipisci aut nam inventore.</p>
+                                    <h2 class="quote__copy__subtitle">Lorem, ipsum dolor.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container mt50">
+            <a href="mailto:registrations@redandyellow.co.za?subject=I%20want%20you%20to%20call%20me%20back"
+                class="cta-btn cta-btn--yellow" onclick="gtag('event', 'Click', { 'event_category': 'Email' });">Request
+                a call back</a>
+
+            <a href="mailto:registrations@redandyellow.co.za?subject=I%20want%20you%20to%20call%20me%20back"
+                class="cta-btn cta-btn--red" onclick="gtag('event', 'Click', { 'event_category': 'Email' });">Request a
+                call back</a>
+        </div>
+
+
+        <div class="container mt50">
+            <div class="row">
+                <div class="col-sm-6 full-on-tab">
+                    <div class="video-card">
+                        <div class="video-card__view">
+                            <div class="video" data-src="https://www.youtube.com/embed/U4dgns6tKk0">
+                                <iframe width="560" height="315" frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <img class="video-card__place-holder"
+                                src="https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2018/08/linkedin-sales-navigator-402833-unsplash.jpg"
+                                alt="">
+                            <span class="video-card__play video-card__play--center"></span>
+                        </div>
+                        <div class="video-card__intro">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit in maiores molestiae
+                            voluptatum architecto iste earum at mollitia aperiam cupiditate.
+                            lorem90
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container mt50">
+
+            <h1 class="section-title--sub text-red">Lorem ipsum dolor sit amet.</h1>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="module-block">
+                        <h1 class="module-block__title text-red">Module 01</h1>
+                        <p class="module-block__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                            voluptates consectetur pariatur eveniet vitae magni.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="module-block">
+                        <h1 class="module-block__title text-red">Module 01</h1>
+                        <p class="module-block__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                            voluptates consectetur pariatur eveniet vitae magni.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="module-block">
+                        <h1 class="module-block__title text-red">Module 01</h1>
+                        <p class="module-block__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                            voluptates consectetur pariatur eveniet vitae magni.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="module-block">
+                        <h1 class="module-block__title text-red">Module 01</h1>
+                        <p class="module-block__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                            voluptates consectetur pariatur eveniet vitae magni.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="endorsed-by mt50">
+                <span class="endorsers__title">Endorsed by</span>
+                <div class="endorsers">
+                    <div class="corporates-logo">
+                        <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92w/635981/32598/WPP.png" alt="">
+                    </div>
+                    <div class="corporates-logo">
+                        <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q91w/635981/32568/Absa.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="container mt50">
+                <div class="row">
+                    <div class="col-sm-8 copyright" pardot-region="copyright">
+                        <p>© 2019 Red &amp; Yellow Creative School of Business (Pty) Ltd. is registered as a private
+                            higher education institution in terms of section 54(1)(C) of Higher Education Act, 1997. DOE
+                            Registration No.: 2005/HE07/002<br>
+                            97 Durham Avenue, 2nd Floor, Salt River Cape Town, 7925, South Africa | 0861 878 258</p>
+                    </div>
+                    <div class="col-sm-4 text-right" pardot-region="social-media">
+                        <ul class="social">
+                            <li>
+                                <a href="http://www.facebook.com/redandyellowed" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://www.twitter.com/redandyellowed" target="_blank"><i
+                                        class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://www.instagram.com/redandyellowed" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://www.instagram.com/redandyellowed" target="_blank"> <i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                                <a href="https//www.redandyellow.co.za" target="_blank"> <i
+                                        class="fas fa-globe-africa"></i></a>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-  </div><a class="open-form desktop-hide" href="#">Download The free eBook</a> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript">
-  </script> 
-  <script type="text/javascript">
-          function formPosition() {
-            if ($(window).width() < 960) {
-             $('.form-position').insertAfter('.highlight');
-            }
-            else {
-              $('.form-position').insertBefore('.highlight');
-            }
-          }
-          $( document ).ready(function() { 
-              formPosition();
-          });
-          window.addEventListener('resize', function () {
-            formPosition();
-          })
-  </script>
-  <script>
-  window.addEventListener('load',function(){
-    var x = 0;
-    var timer = setInterval(function(){
-      if(jQuery('p:contains(Thank you )').is(":visible")){
-        if(x==0){
-          gtag('event','submit',{'event_category':'form','event_label':window.location.pathname})
-        }
-        clearInterval(timer);
-      }
-    })
-    })
-</script>
+
+
+
+    <!-- Scripts  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js">
+    </script>
+
+    <script src="js/index.js"></script>
+
 </body>
+
 </html>
