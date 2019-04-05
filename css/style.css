@@ -939,6 +939,13 @@ body {
   top: 0;
   right: 20px;
   transition: 250ms ease all;
+  overflow-y: scroll;
+  height: 90vh;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+.form-top::-webkit-scrollbar {
+  width: 0 !important;
 }
 @media (max-width: 480px) {
   .form-top.open .form-info {

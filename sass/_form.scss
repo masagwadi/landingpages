@@ -87,6 +87,17 @@
     right: 20px;
     transition: 250ms ease all;
 
+    overflow-y: scroll;
+    height: 90vh;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar { 
+        width: 0 !important 
+    }
+
+
+
     &.open{
         .form-info{
             @include breakpoint(mobileonly){
