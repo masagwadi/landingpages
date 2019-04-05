@@ -2,6 +2,17 @@
 /*********************
 BREAKPOINTS
 *********************/
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-7px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -350,11 +361,26 @@ template {
   color: #da2128;
 }
 
+@media (min-width: 768px) and (max-width: 800px) {
+  .slider, .slick-slider {
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 480px) {
+  .slider, .slick-slider {
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* --------------------------
 
- For Base Global Styling
+  For Base Global Styling
 
- --------------------------*/
+  --------------------------*/
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -400,6 +426,14 @@ body {
   padding: 10px;
 }
 
+.pad-x20 {
+  padding: 20px;
+}
+
+.light-gray-bg {
+  background-color: #d8d8d8;
+}
+
 .full {
   width: 100%;
 }
@@ -412,6 +446,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 5px solid #da2128;
+}
+@media (max-width: 480px) {
+  .highlight > .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .highlight {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+  }
 }
 
 .text-red {
@@ -455,16 +502,17 @@ body {
 }
 .profile__sub-title {
   width: calc(100% - 95px);
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: initial;
   margin: 0;
   vertical-align: top;
   float: left;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .profile__copy {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 18px;
   display: inherit;
 }
 
@@ -472,10 +520,44 @@ body {
 .contributor {
   padding: 20px;
 }
+.graduate > h2,
+.contributor > h2 {
+  margin-bottom: 15px;
+}
 
 .logo {
   padding: 0 0 10px 0;
   margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  .logo {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+}
+@media (min-width: 768px) and (max-width: 800px) {
+  .logo {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+}
+.logo img {
+  width: 225px;
+  border-width: 0px;
+  border-style: solid;
+}
+@media (max-width: 480px) {
+  .logo img {
+    width: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .full-on-tab {
+    width: 100%;
+  }
 }
 
 .lesson-card {
@@ -607,7 +689,13 @@ body {
 .quote {
   max-width: 500px;
   padding-top: 60px;
-  padding-bottom: 60px;
+}
+@media (min-width: 768px) and (max-width: 800px) {
+  .quote {
+    margin-left: auto;
+    margin-right: auto;
+    display: block !important;
+  }
 }
 .quote__img {
   display: inline-block;
@@ -619,6 +707,19 @@ body {
   margin-top: 10px;
   margin-right: 20px;
 }
+@media (max-width: 480px) {
+  .quote__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 481px) {
+  .quote__img {
+    margin-top: 25%;
+    transform: translateY(-50%);
+  }
+}
 .quote__img img {
   height: 100%;
   width: 100%;
@@ -628,6 +729,13 @@ body {
   display: inline-block;
   max-width: 400px;
   padding: 10px;
+  color: #000000;
+}
+@media (min-width: 481px) {
+  .quote__copy {
+    margin-top: 25%;
+    transform: translateY(-50%);
+  }
 }
 .quote__copy__title {
   font-size: 20px;
@@ -638,8 +746,8 @@ body {
 }
 .quote__copy__intro {
   font-size: 14px;
-  line-height: 16px;
-  max-width: 300px;
+  line-height: 22px;
+  max-width: 350px;
   padding-left: 40px;
   padding-right: 30px;
   position: relative;
@@ -670,19 +778,25 @@ body {
 }
 .quote__copy__subtitle {
   margin-top: 20px;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 18px;
   font-family: "Lato", helvetica, arial, sans-serif;
+  max-width: 350px;
 }
 
 .quote-bg {
   background-color: #d8d8d8;
 }
 
+@media (max-width: 480px) {
+  .module-block {
+    margin-bottom: 20px;
+  }
+}
 .module-block__title {
   font-weight: bold;
   font-size: 18px;
-  list-style: 20px;
+  line-height: 20px;
   margin-bottom: 5px;
 }
 .module-block__intro {
@@ -697,6 +811,16 @@ body {
   line-height: 24px;
   transition: 250ms ease all;
   display: inline-block;
+}
+@media (max-width: 480px) {
+  .cta-btn {
+    padding: 15px 80px 15px 15px;
+    font-size: 14px;
+    line-height: 16px;
+    background-position: 97% 7px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
 .cta-btn:hover {
   text-decoration: none;
@@ -727,9 +851,25 @@ body {
 .form-block-container {
   position: absolute;
   max-width: 350px;
-  border: 1px solid #000000;
+  border: 1px solid #d8d8d8;
   overflow: hidden;
   background-color: #ffffff;
+}
+@media (min-width: 768px) and (max-width: 800px) {
+  .form-block-container {
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .form-block-container {
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
 }
 
 .form-block {
@@ -737,14 +877,44 @@ body {
   z-index: 999;
   min-width: 350px;
 }
+@media (min-width: 768px) and (max-width: 800px) {
+  .form-block {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .form-block label {
+    font-size: 12px !important;
+    line-height: 14px !important;
+  }
+}
+@media (max-width: 480px) {
+  .form-block {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
 .form-block__title {
   padding: 20px;
-  background-color: #da2128;
   color: #ffffff;
   transition: 250ms ease all;
   text-align: center;
   font-size: 18px;
   line-height: 22px;
+}
+@media (max-width: 480px) {
+  .form-block__title {
+    font-size: 14px;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+.form-block__title.red {
+  background-color: #da2128;
+}
+.form-block__title.yellow {
+  background-color: #f1ce00;
 }
 @media (max-width: 480px) {
   .form-block {
@@ -757,15 +927,44 @@ body {
   padding: 10px;
   background-color: #ffffff;
 }
+@media (min-width: 768px) and (max-width: 800px) {
+  .form-info {
+    padding: 0;
+    width: 100%;
+  }
+}
 
 .form-top {
   position: fixed;
-  top: 10px;
+  top: 0;
   right: 20px;
   transition: 250ms ease all;
 }
+@media (max-width: 480px) {
+  .form-top.open .form-info {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 800px) {
+  .form-top.open .form-info {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 800px) {
+  .form-top {
+    top: 0;
+    right: 0 !important;
+  }
+}
+@media (max-width: 480px) {
+  .form-top {
+    top: 0;
+    right: 0 !important;
+  }
+}
 .form-top .form-block__title {
   position: relative;
+  cursor: pointer;
 }
 .form-top .form-block__title.open:before {
   transform: rotate(180deg);
@@ -775,18 +974,72 @@ body {
 .form-top .form-block__title:before {
   font-family: "Font Awesome 5 Free";
   content: "";
-  height: 25px;
+  height: 15px;
   position: absolute;
-  top: 20px;
+  top: 25px;
   right: 20px;
   font-size: 15px;
+  line-height: 15px;
   transition: 250ms ease all;
   transform-origin: center center;
   font-weight: 900;
+  animation: bounce 2s infinite;
+}
+@media (max-width: 480px) {
+  .form-top .form-block__title:before {
+    top: 12px;
+    right: 30px;
+    height: 15px;
+  }
 }
 
 .form-block__cta {
   padding: 20px;
+}
+
+#pardot-form input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+#pardot-form input[type=radio] + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+#pardot-form input[type=radio] + label:before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 1px solid #565759;
+}
+#pardot-form input[type=radio]:hover + label:before {
+  background: #f1ce00;
+}
+#pardot-form input[type=radio]:checked + label:before {
+  background: #2a8947;
+}
+#pardot-form input[type=radio]:disabled + label {
+  color: #b8b8b8;
+  cursor: auto;
+}
+#pardot-form input[type=radio]:disabled + label:before {
+  box-shadow: none;
+  background: #ddd;
+}
+#pardot-form input[type=radio]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
 }
 
 .form-container {
@@ -841,7 +1094,12 @@ body form.form p label {
 }
 
 body form.form p.form-field {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  body form.form p.form-field {
+    margin-bottom: 10px;
+  }
 }
 
 body form.form input[type=text], form.form textarea {
@@ -851,6 +1109,9 @@ body form.form input[type=text], form.form textarea {
   padding: 5px !important;
   font-size: 15px;
   font-family: "Lato", sans-serif;
+}
+body form.form input[type=text]:focus, form.form textarea:focus {
+  border-color: #2a8947;
 }
 
 body form.form input[type=text]:focus, form.form textarea:focus, form.form select:focus {
@@ -932,9 +1193,16 @@ h1 {
 h2 {
   color: #da2128;
   font-size: 22px;
-  line-height: 35px;
+  line-height: 28px;
   font-weight: normal;
   margin: 0;
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
 }
 
 h3 {
@@ -944,28 +1212,45 @@ h3 {
   margin: 0;
 }
 
-table.event-details {
+.event-details {
   table-layout: fixed;
   width: 100%;
   font-size: 16px;
   margin-top: 30px;
   color: #333;
 }
+@media (max-width: 480px) {
+  .event-details [class^=col-] {
+    padding-bottom: 15px;
+  }
+}
 
-table.event-details i {
+.event-details i {
   font-size: 30px;
   padding-right: 10px;
   position: relative;
   top: 5px;
+  color: #da2128;
 }
 
-table.event-details i {
-  color: #da2128;
+@media (max-width: 480px) {
+  .event-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-type {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
 }
 
 .headline-container {
   background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
+  padding: 20px 10px;
 }
 
 .headline {
@@ -995,6 +1280,11 @@ ul.social {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 480px) {
+  ul.social {
+    text-align: center;
+  }
 }
 
 ul.social li {

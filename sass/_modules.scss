@@ -1,8 +1,13 @@
 .module-block{
+
+    @include breakpoint(mobileonly){
+        margin-bottom: 20px;
+    }
+
     &__title{
         font-weight: bold;
         font-size: 18px;
-        list-style: 20px;
+        line-height: 20px;
         margin-bottom: 5px;
     }
     &__intro{

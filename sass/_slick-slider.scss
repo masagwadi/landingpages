@@ -9,3 +9,16 @@
     }
 }
 
+
+.slider,.slick-slider{
+    @include breakpoint(tabletdown){
+        max-width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include breakpoint(mobileonly){
+        max-width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

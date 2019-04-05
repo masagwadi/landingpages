@@ -14,6 +14,9 @@ ul.social {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    @include breakpoint(mobileonly) {
+        text-align: center;
+    }
 }
 ul.social li {
     display: inline-block;

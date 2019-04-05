@@ -5,6 +5,17 @@
     line-height: 24px;
     transition: 250ms ease all;
     display: inline-block;
+
+    @include breakpoint(mobileonly) {
+        padding: 15px 80px 15px 15px;
+        font-size: 14px;
+        line-height: 16px;
+        background-position: 97% 7px;
+
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
     &:hover{
         text-decoration: none;
         transition: 250ms ease all;

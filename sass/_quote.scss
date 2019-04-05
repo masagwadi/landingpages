@@ -6,7 +6,13 @@
 .quote{
     max-width: 500px;
     padding-top: 60px;
-    padding-bottom: 60px;
+    // padding-bottom: 60px;
+
+    @include breakpoint(tabletdown){
+        margin-left: auto;
+        margin-right: auto;
+        display: block !important;
+    }
 
     &__img{
         display: inline-block;
@@ -17,6 +23,17 @@
         vertical-align: top;
         margin-top: 10px;
         margin-right: 20px;
+        @include breakpoint(mobileonly){
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include breakpoint(tabletup){
+            margin-top: 25%;
+            transform: translateY(-50%);
+        }
+
         img{
             height: 100%;
             width: 100%;
@@ -29,6 +46,12 @@
         display: inline-block;
         max-width: 400px;
         padding: 10px;
+        color: $black;
+
+        @include breakpoint(tabletup){
+            margin-top: 25%;
+            transform: translateY(-50%);
+        }
 
         &__title{
             font-size: 20px;
@@ -40,8 +63,8 @@
 
         &__intro{
             font-size: 14px;
-            line-height: 16px;
-            max-width: 300px;
+            line-height: 22px;
+            max-width: 350px;
             padding-left: 40px;
             padding-right: 30px;
             position: relative;
@@ -73,9 +96,10 @@
 
         &__subtitle{
             margin-top: 20px;
-            font-size: 18px;
-            line-height: 20px;
+            font-size: 14px;
+            line-height: 18px;
             font-family: 'Lato', helvetica, arial, sans-serif;
+            max-width: 350px;
         }
     }
 }

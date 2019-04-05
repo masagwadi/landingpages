@@ -56,15 +56,30 @@
 
 
  // Helpers for testing
+
+//  MARGINS
  .mt50 {
      margin-top: 50px;
  }
 
+//  PADDING
  .pad-x10 {
      padding: 10px;
  }
 
+ .pad-x20{
+     padding: 20px;
+ }
 
+
+//  BACKGROND COLORS
+
+.light-gray-bg{
+    background-color: $lightgray;
+}
+
+
+//  WIDTHS
  .full {
      width: 100%;
  }
@@ -81,6 +96,19 @@
      background-size: cover;
 
      border-bottom: 5px solid $red;
+
+     & > .container{
+        @include breakpoint(mobileonly) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+     }
+
+     @include breakpoint(mobileonly) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 20px;
+    }
 
  }
 
@@ -138,17 +166,19 @@
 
      &__sub-title {
          width: calc(100% - 95px);
-         font-size: 14px;
-         line-height: 16px;
+         font-size: 12px;
+         line-height: 14px;
+         font-style: initial;
          margin: 0;
          vertical-align: top;
          float: left;
-         margin-bottom: 5px;
+         margin-bottom: 15px;
+
      }
 
      &__copy {
-         font-size: 12px;
-         line-height: 16px;
+         font-size: 14px;
+         line-height: 18px;
          display: inherit;
      }
  }
@@ -157,10 +187,51 @@
  .graduate,
  .contributor {
      padding: 20px;
+     > h2{
+         margin-bottom: 15px;
+     }
  }
 
 
  .logo {
      padding: 0 0 10px 0;
      margin-bottom: 30px;
+
+     @include breakpoint(mobileonly) {
+        text-align: center;
+        padding: 10px;
+        background-color: $white;
+    }
+
+     @include breakpoint(tabletdown) {
+        text-align: center;
+        padding: 10px;
+        background-color: $white;
+    }
+
+     img{
+        width: 225px; 
+        // height: 154px; 
+        border-width: 0px; 
+        border-style: solid;
+        @include breakpoint(mobileonly) {
+            width: 100px;
+        }
+     }
  }
+
+
+//  FULL on Tablet
+
+.full-on-tab{
+    @include breakpoint(tabletdown) {
+        width: 100%;
+    }
+}
+
+//  Overide the default Bootstrap styling on Mobile 
+
+// .container{
+//     padding-left: 0;
+//     padding-right: 0;
+// }

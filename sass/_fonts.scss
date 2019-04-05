@@ -16,9 +16,14 @@
    h2 {
     color: #da2128;
     font-size: 22px;
-    line-height: 35px;
+    line-height: 28px;
     font-weight: normal;
     margin: 0;
+    @include breakpoint(mobileonly){
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 15px;
+    }
    }
 
    h3 {
@@ -29,29 +34,49 @@
    }
 
 
-   table.event-details {
+ .event-details {
     table-layout:fixed;
     width:100%;
     font-size:16px;
     margin-top:30px;
     color:#333;
+
+    [class^="col-"]{
+        @include breakpoint(mobileonly){
+            padding-bottom: 15px;
+        }
+    }
+
    }
-   table.event-details i {
+
+   .event-details i {
     font-size:30px;
     padding-right:10px;
     position:relative;
     top:5px;
+    color: $red;
    }
 
-   table.event-details i {
-    color:#da2128;
+
+   .event-title{
+        @include breakpoint(mobileonly){
+            font-size: 18px;
+            line-height: 22px;
+        }
    }
 
+   .event-type{
+    @include breakpoint(mobileonly){
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 15px;
+    }
+   }
    
 
 .headline-container {
     background: rgba(255, 255, 255, 0.8); 
-    padding: 10px;
+    padding: 20px 10px;
 }
 
 .headline {

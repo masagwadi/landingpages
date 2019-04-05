@@ -65,6 +65,22 @@ $(".quotes-block").slick({
     autoplay: true,
     autoplaySpeed: 2000,
 
+    // the breakpoints
+    responsive: [{
+        breakpoint: 480,
+        settings: {
+        slidesToShow: 1,
+        dots: false
+        }
+    },{
+        breakpoint: 780,
+        settings: {
+        slidesToShow: 1,
+        dots: false
+        }
+    }
+]
+
 });
 
 
@@ -82,6 +98,8 @@ $('body').on('click','.video-card__play', function(){
 
 // Scroll position check
 
+var OriginalformBlockHeight = $('.form-block').outerHeight();
+
 $(window).bind('scroll', function() {
     var scrollTop     = $(window).scrollTop();
     var formTop = $('.form-block-container').prev().offset().top; //get the offset top of the form block
@@ -97,26 +115,27 @@ $(window).bind('scroll', function() {
     if(isMobile){
         formRight = 0;
     }
-    console.log(formRight);
+    console.log(prviousElementTopPosition);
+    console.log(OriginalformBlockHeight);
 
     // For desktop
     // if(!isMobile){
-        if(FormtopPosition < 0 && !formfixed ){
+        if(FormtopPosition < 20 && !formfixed ){
             // fix the form block to the top
             $('.form-block').addClass('form-top').css('right', formRight);
             
-            // Collapse the form info
-            $('.form-info').hide();
+            // Collapse the form info but add the border on the form
+            $('.form-info').hide().css({'border': '1px solid #d8d8d8'});
 
             // add the height of the form block as body padding
             $('.form-block-container').css('padding-top',formBlockHeight + 30);
 
-        }else if((prviousElementTopPosition) > 0 && formfixed ) {
+        }else if((prviousElementTopPosition) > -(OriginalformBlockHeight) && formfixed ) {
             // release the form block from the top
             $('.form-block').removeClass('form-top').css({'right': 'auto'});
 
-            // show the form info
-            $('.form-info').show();
+            // show the form info and hide the border
+            $('.form-info').show().css({'border': 'none'});
 
             // add the height of the form block as body padding
             $('.form-block-container').css('padding-top', 0);
@@ -134,6 +153,7 @@ $(window).bind('scroll', function() {
 $('body').on('click', '.form-top .form-block__title', function(){
     $('.form-info').slideToggle();
     $(this).toggleClass('open');
+    $('.form-top').toggleClass('open');
 });
 
 

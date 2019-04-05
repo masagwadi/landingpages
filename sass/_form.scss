@@ -1,9 +1,22 @@
 .form-block-container {
     position: absolute;
     max-width: 350px;
-    border: 1px solid $black;
+    border: 1px solid $lightgray;
     overflow: hidden;
     background-color: $white;
+    @include breakpoint(tabletdown) {
+       position: relative;
+       min-width: 100%;
+       max-width: 100%;
+       margin-top: 30px;
+    }
+    @include breakpoint(mobileonly){
+       position: relative;
+       min-width: 100%;
+       max-width: 100%;
+       margin-top: 30px;
+    }
+
 }
 
 .form-block {
@@ -11,15 +24,45 @@
     z-index: 999;
     min-width: 350px;
 
+    @include breakpoint(tabletdown){
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    label{
+        @include breakpoint(mobileonly) {
+            font-size: 12px !important;
+            line-height: 14px !important;
+         }
+    }
+
+    @include breakpoint(mobileonly) {
+        min-width: 100%;
+        max-width: 100%;
+     }
+
 
     &__title {
         padding: 20px;
-        background-color: $red;
         color: $white;
         transition: 250ms ease all;
         text-align: center;
         font-size: 18px;
         line-height: 22px;
+        @include breakpoint(mobileonly) {
+            font-size: 14px;
+            font-size: 16px;
+            padding: 10px;
+         }
+
+        &.red{
+            background-color: $red;
+        }
+
+        &.yellow{
+            background-color: $yellow;
+        }
+
     }
 
     @include breakpoint(mobileonly) {
@@ -31,34 +74,43 @@
 .form-info {
     padding: 10px;
     background-color: $white;
+    @include breakpoint(tabletdown) {
+        padding: 0;
+        width: 100%;
+    }
 }
 
 
 .form-top {
     position: fixed;
-    top: 10px;
+    top: 0;
     right: 20px;
     transition: 250ms ease all;
 
-    @include breakpoint('small') {
-        top: auto;
-        bottom: 0;
-        width: 100%;
+    &.open{
+        .form-info{
+            @include breakpoint(mobileonly){
+                min-height: 100vh;
+            }
+            @include breakpoint(tabletdown){
+                min-height: 100vh;
+            }
+        }
     }
+
+    @include breakpoint(tabletdown) {
+        top: 0;
+        right: 0 !important;
+     }
+
+    @include breakpoint(mobileonly) {
+        top: 0;
+        right: 0 !important;
+     }
 
     .form-block__title {
         position: relative;
-
-        // &::before{
-        // height: 35px;
-        // width: 35px;
-        // display: block;
-        // position: absolute;
-        // right: 15px;
-        // bottom: -17.5px;
-        // cursor: pointer;
-        // background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat  #da2128;
-        // }
+        cursor: pointer;
 
         &.open {
             &:before {
@@ -66,19 +118,29 @@
                 transition: 250ms ease all;
                 transform-origin: center center;
             }
+
         }
 
         &:before {
             font-family: "Font Awesome 5 Free";
             content: '\f078';
-            height: 25px;
+            height: 15px;
             position: absolute;
-            top: 20px;
+            top: 25px;
             right: 20px;
             font-size: 15px;
+            line-height: 15px;
             transition: 250ms ease all;
             transform-origin: center center;
             font-weight: 900;
+
+            animation: bounce 2s infinite;
+
+            @include breakpoint(mobileonly) {
+                top: 12px;
+                right: 30px;
+                height: 15px;
+             }
         }
 
     }
@@ -89,6 +151,87 @@
 .form-block__cta{
     padding: 20px;
 }
+
+
+
+
+// Custom Check boxex 
+#pardot-form{
+    input[type=radio] {
+        position: absolute; // take it out of document flow
+        opacity: 0; // hide it
+      
+        & + label {
+          position: relative;
+          cursor: pointer;
+          padding: 0;
+        }
+      
+        // Box.
+        & + label:before {
+          content: '';
+          margin-right: 10px;
+          display: inline-block;
+          vertical-align: text-top;
+          width: 20px;
+          height: 20px;
+          background: white;
+          border: 1px solid $darkgray;
+        }
+      
+        // Box hover
+        &:hover + label:before {
+          background: $yellow;
+        }
+        
+        // Box focus
+        &:focus + label:before {
+        //   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+        }
+      
+        // Box checked
+        &:checked + label:before {
+          background: $green;
+        }
+        
+        // Disabled state label.
+        &:disabled + label {
+          color: #b8b8b8;
+          cursor: auto;
+        }
+      
+        // Disabled box.
+        &:disabled + label:before {
+          box-shadow: none;
+          background: #ddd;
+        }
+      
+        // Checkmark. Could be replaced with an image
+        &:checked + label:after {
+          content: '';
+          position: absolute;
+          left: 5px;
+          top: 9px;
+          background: white;
+          width: 2px;
+          height: 2px;
+          box-shadow: 
+            2px 0 0 white,
+            4px 0 0 white,
+            4px -2px 0 white,
+            4px -4px 0 white,
+            4px -6px 0 white,
+            4px -8px 0 white;
+          transform: rotate(45deg);
+        }
+      }
+}
+
+
+
+// End of Custom Check Boxes 
+
+
 
 
 .form-container {
@@ -144,7 +287,10 @@ form.form input[type=submit] {
     width:auto;
    }
    body form.form p.form-field {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    @include breakpoint(mobileonly){
+        margin-bottom: 10px;
+    }
    }
    body form.form input[type=text], form.form textarea {
     width: 100%;
@@ -153,6 +299,11 @@ form.form input[type=submit] {
     padding: 5px !important;
     font-size: 15px;
     font-family: 'Lato', sans-serif;
+
+    &:focus{
+        border-color: $green;
+    }
+
    }
    body form.form input[type=text]:focus, form.form textarea:focus, form.form select:focus {
     outline: none;
