@@ -22,7 +22,9 @@
 
  // Helpers 
 
- .plx30 {}
+ .plx30 {
+     padding-left: 30px;
+ }
 
  // # remove padding between columns 
  .row.no-pad>[class*='col-'] {

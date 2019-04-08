@@ -77,6 +77,7 @@
     @include breakpoint(tabletdown) {
         padding: 0;
         width: 100%;
+
     }
 }
 
@@ -196,9 +197,9 @@
         }
         
         // Box focus
-        &:focus + label:before {
+        // &:focus + label:before {
         //   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-        }
+        // }
       
         // Box checked
         &:checked + label:before {
