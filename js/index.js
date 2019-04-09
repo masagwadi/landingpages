@@ -136,15 +136,14 @@ $(window).bind('scroll', function() {
     var FormtopPosition = formTop - scrollTop + heightOfPrev + formBlockHeight + 30;
     var prviousElementTopPosition = formTop - scrollTop + heightOfPrev;
     var formfixed = $('.form-block').hasClass('form-top');
-    // console.log( prviousElementTopPosition ); 
+
 
     // Get the distace of the form to the right
     var formRight = $(document).width() - ($('.form-block').offset().left + $('.form-block').width());
     if(isMobile){
         formRight = 0;
     }
-    console.log(prviousElementTopPosition);
-    console.log(OriginalformBlockHeight);
+
 
     // For desktop
     // if(!isMobile){
@@ -185,3 +184,44 @@ $('body').on('click', '.form-top .form-block__title', function(){
 });
 
 
+
+
+// Progress prototype
+
+
+    var circle = document.querySelector('circle');
+    var radius = circle.r.baseVal.value;
+    var circumference = radius * 2 * Math.PI;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = `${circumference}`;
+    
+    function setProgress(percent) {
+      const offset = circumference - percent / 100 * circumference;
+      circle.style.strokeDashoffset = offset;
+    }
+
+    setProgress(0);
+
+    $(window).bind('scroll', function() {
+
+        var docHeight = $(document).height();
+        var scrollposition = $(document).scrollTop();
+        var windowHeight = window.innerHeight;
+
+        var perc = (scrollposition + windowHeight) / docHeight * 100;
+        console.log(perc - 16);
+        if (perc < 17){
+            setProgress(perc/2); 
+        }else{
+            setProgress(perc);
+        }
+
+        if(perc > 95){
+            circle.style.fill = `#f1ce00`;
+        }else{
+            circle.style.fill = `transparent`;
+        }
+        
+
+    });
