@@ -649,6 +649,9 @@ body {
   list-style: 16px;
 }
 
+.info-card {
+  text-align: center;
+}
 .info-card__img {
   display: block;
   height: 90px;
