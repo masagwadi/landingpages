@@ -13,7 +13,7 @@ $(".slider").slick({
 
 // normal options...
 infinite: true,
-slidesToShow: 5,
+slidesToShow: 4,
 autoplay: true,
 autoplaySpeed: 2000,
 
@@ -52,9 +52,37 @@ responsive: [{
 // Slick slider for the endorsers 
 $(".endorsers").slick({
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 2,
     autoplay: false,
     autoplaySpeed: 2000,
+
+    
+// the breakpoints
+responsive: [{
+
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 2,
+      infinite: true
+    }
+
+  }, {
+
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 2,
+      dots: false
+    }
+
+  }, {
+
+    breakpoint: 480,
+    // settings: "unslick" // destroys slick
+    settings: {
+      slidesToShow: 1,
+      dots: false
+    }
+  }]
 
 });
 

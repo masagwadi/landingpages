@@ -74,6 +74,7 @@
 .form-info {
     padding: 10px;
     background-color: $white;
+    border-bottom: 1px solid $lightgray !important;
     @include breakpoint(tabletdown) {
         padding: 0;
         width: 100%;
