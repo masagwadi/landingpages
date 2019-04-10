@@ -399,6 +399,12 @@ html {
   padding-left: 30px;
 }
 
+@media (max-width: 480px) {
+  .plmx10 {
+    padding-left: 10px;
+  }
+}
+
 .row.no-pad > [class*=col-] {
   padding-right: 0;
   padding-left: 0;
@@ -571,7 +577,7 @@ body {
 
 .circle {
   position: fixed;
-  top: 10px;
+  bottom: 10px;
   left: 10px;
   width: 50px;
   height: 50px;
