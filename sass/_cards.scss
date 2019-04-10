@@ -52,6 +52,13 @@
 .endorsers{
     display: inline-block;
     width: 300px;
+
+    @include breakpoint(mobileonly) {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
     &__title{
         vertical-align: top;
         padding-top: 27px;
@@ -117,7 +124,7 @@
 .info-card{
     
     text-align: center;
-    
+
     // border: 1px solid #d8d8d8;
 
     &__img{

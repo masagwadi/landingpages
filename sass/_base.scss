@@ -263,9 +263,13 @@
     z-index: 9999;
     transition: 250ms ease all;
 
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+
     svg{
         width: 100%;
         height: 100%;
         stroke: $red !important;
+        transition: 250ms ease all;
     }
 }
