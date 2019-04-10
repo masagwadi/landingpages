@@ -23,16 +23,1443 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
 
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
 
-    <title>R&Y Template Components</title>
+    <style type="text/css">
+        /* FORM inline styling */
+        form.form p label {
+            color: #333333;
+            font-family: Helvetica, Arial, sans-serif;
+            float: none;
+            text-align: left;
+            line-height: 1em;
+            width: auto;
+        }
+
+        form.form p.submit {
+            margin-left: 5px;
+        }
+
+        form.form p.no-label {
+            margin-left: 50px;
+        }
+
+        form.form span.value {
+            margin-left: 0px;
+        }
+
+        form.form p span.description {
+            margin-left: 0px;
+        }
+
+        form.form p.required label,
+        form.form span.required label {
+            background-position: top left;
+            background: none;
+            padding-left: 0px;
+        }
+
+        form.form .pd-checkbox .value span {
+            display: block !important;
+        }
+
+        form.form .pd-radio .value span {
+            display: block !important;
+        }
+
+        /* END OF FORM inline styling */
+
+
+        /* @charset "UTF-8"; */
+/*********************
+BREAKPOINTS
+*********************/
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-7px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+.slick-arrow {
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+}
+.slick-arrow:before {
+  color: #da2128;
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .slider, .slick-slider {
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 480px) {
+  .slider, .slick-slider {
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* --------------------------
+
+  For Base Global Styling
+
+  --------------------------*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.plx30 {
+  padding-left: 30px;
+}
+
+@media (max-width: 480px) {
+  .plmx10 {
+    padding-left: 10px;
+  }
+}
+
+.row.no-pad > [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row.pad-x-5 > [class*=col-] {
+  padding: 5px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.corporates-logo {
+  display: inline-block;
+  height: 80px;
+  text-align: center;
+}
+.corporates-logo img {
+  height: 100%;
+  display: inline-block;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.pad-x10 {
+  padding: 10px;
+}
+
+.pad-x20 {
+  padding: 20px;
+}
+
+.light-gray-bg {
+  background-color: #d8d8d8;
+}
+
+.full {
+  width: 100%;
+}
+
+/* Hero background image  */
+.highlight {
+  padding: 50px 20px;
+  position: relative;
+  border-bottom: 5px solid #da2128;
+}
+.highlight .background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 480px) {
+  .highlight > .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .highlight {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+  }
+}
+
+.text-red {
+  color: #da2128;
+}
+
+.section-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.section-title--sub {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.profile__img {
+  width: 80px;
+  height: 80px;
+  vertical-align: top;
+  float: left;
+  margin-right: 10px;
+}
+.profile__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile__title {
+  vertical-align: top;
+  width: calc(100% - 95px);
+  font-size: 16px;
+  line-height: 14px;
+  font-weight: bold;
+  margin: 0;
+  float: left;
+  margin-bottom: 5px;
+}
+.profile__sub-title {
+  width: calc(100% - 95px);
+  font-size: 12px;
+  line-height: 14px;
+  font-style: initial;
+  margin: 0;
+  vertical-align: top;
+  float: left;
+  margin-bottom: 15px;
+}
+.profile__copy {
+  font-size: 14px;
+  line-height: 18px;
+  display: inherit;
+}
+
+.graduate,
+.contributor {
+  padding: 20px;
+}
+.graduate > h2,
+.contributor > h2 {
+  margin-bottom: 15px;
+}
+
+.logo {
+  padding: 0 0 10px 0;
+  margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  .logo {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .logo {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+}
+.logo img {
+  width: 225px;
+  border-width: 0px;
+  border-style: solid;
+}
+@media (max-width: 480px) {
+  .logo img {
+    width: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .full-on-tab {
+    width: 100%;
+  }
+}
+
+.circle {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+  transition: 250ms ease all;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+.circle svg {
+  width: 100%;
+  height: 100%;
+  stroke: #da2128 !important;
+  transition: 250ms ease all;
+}
+
+.lesson-card {
+  display: table;
+  width: 100%;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+}
+.lesson-card--img {
+  display: table-cell;
+  height: 50px;
+  padding: 10px;
+  border-right: 1px solid #d8d8d8;
+}
+.lesson-card--img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.lesson-card--img .fas {
+  font-size: 40px;
+}
+.lesson-card--copy {
+  display: table-cell;
+  height: 50px;
+  padding: 10px;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.endorsers {
+  display: inline-block;
+  width: 300px;
+}
+@media (max-width: 480px) {
+  .endorsers {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+.endorsers__title {
+  vertical-align: top;
+  padding-top: 27px;
+  padding-right: 35px;
+  display: inline-block;
+}
+
+.video-card__view {
+  border: 1px solid #d8d8d8;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.video-card__view iframe {
+  width: 100%;
+  height: 300px;
+  display: none;
+}
+.video-card__place-holder {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.video-card__play {
+  height: 35px;
+  width: 35px;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 80% 2px #da2128;
+  border-radius: 50%;
+}
+.video-card__play--bottom-right {
+  right: 15px;
+  bottom: -17.5px;
+}
+.video-card__play--center {
+  right: calc(50% - 17.5px/2);
+  bottom: calc(50% - 17.5px);
+}
+.video-card__intro {
+  text-align: center;
+  padding: 10px 50px 10px 50px;
+  font-size: 12px;
+  list-style: 16px;
+}
+
+.info-card {
+  text-align: center;
+}
+.info-card__img {
+  display: block;
+  height: 90px;
+  overflow: hidden;
+}
+.info-card__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.info-card__icon {
+  display: inline-block;
+  height: 35px;
+  width: 100%;
+  text-align: center;
+}
+.info-card__icon i {
+  font-size: 35px;
+  color: #da2128;
+}
+.info-card__title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.info-card__intro {
+  font-size: 14px;
+  line-height: 20px;
+}
+.info-card__cta {
+  height: 15px;
+  display: block;
+  position: relative;
+  margin-bottom: 5px;
+}
+.info-card__cta:before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.quote {
+  max-width: 500px;
+  padding-top: 60px;
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .quote {
+    margin-left: auto;
+    margin-right: auto;
+    display: block !important;
+  }
+}
+.quote__img {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+@media (max-width: 480px) {
+  .quote__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 481px) {
+  .quote__img {
+    margin-top: 25%;
+    transform: translateY(-50%);
+  }
+}
+.quote__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.quote__copy {
+  display: inline-block;
+  max-width: 400px;
+  padding: 10px;
+  color: #000000;
+}
+@media (min-width: 481px) {
+  .quote__copy {
+    margin-top: 25%;
+    transform: translateY(-50%);
+  }
+}
+.quote__copy__title {
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Lato", helvetica, arial, sans-serif;
+}
+.quote__copy__intro {
+  font-size: 14px;
+  line-height: 22px;
+  max-width: 350px;
+  padding-left: 40px;
+  padding-right: 30px;
+  position: relative;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+.quote__copy__intro:before {
+  font-family: "Font Awesome 5 Free" !important;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+  text-decoration: inherit;
+}
+.quote__copy__intro:after {
+  font-family: "Font Awesome 5 Free" !important;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+  text-decoration: inherit;
+}
+.quote__copy__subtitle {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Lato", helvetica, arial, sans-serif;
+  max-width: 350px;
+  color: #000000;
+}
+
+.quote-bg {
+  background-color: #d8d8d8;
+}
+
+@media (max-width: 480px) {
+  .module-block {
+    margin-bottom: 20px;
+  }
+}
+.module-block__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.module-block__intro {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.cta-btn {
+  padding: 15px 80px 15px 30px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  transition: 250ms ease all;
+  display: inline-block;
+}
+@media (max-width: 480px) {
+  .cta-btn {
+    padding: 15px 80px 15px 15px;
+    font-size: 14px;
+    line-height: 16px;
+    background-position: 97% 7px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.cta-btn:hover {
+  text-decoration: none;
+  transition: 250ms ease all;
+}
+.cta-btn--full {
+  width: 100%;
+}
+.cta-btn--yellow {
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 92% 10px #f1ce00;
+  border: 2px solid #f1ce00;
+  color: #ffffff;
+}
+.cta-btn--yellow:hover {
+  color: #000000;
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover.png) no-repeat 92% 10px #ffffff;
+}
+.cta-btn--red {
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 92% 10px #da2128;
+  border: 2px solid #da2128;
+  color: #ffffff;
+}
+.cta-btn--red:hover {
+  color: #000000;
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover-red.png) no-repeat 92% 10px #ffffff;
+}
+
+.form-block-container {
+  position: absolute;
+  max-width: 350px;
+  border: 1px solid #d8d8d8;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .form-block-container {
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .form-block-container {
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}
+
+.form-block {
+  max-width: 350px;
+  z-index: 999;
+  min-width: 350px;
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .form-block {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .form-block label {
+    font-size: 12px !important;
+    line-height: 14px !important;
+  }
+}
+@media (max-width: 480px) {
+  .form-block {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+.form-block__title {
+  padding: 20px;
+  color: #ffffff;
+  transition: 250ms ease all;
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+}
+@media (max-width: 480px) {
+  .form-block__title {
+    font-size: 14px;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+.form-block__title.red {
+  background-color: #da2128;
+}
+.form-block__title.yellow {
+  background-color: #f1ce00;
+}
+@media (max-width: 480px) {
+  .form-block {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.form-info {
+  padding: 10px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8d8d8 !important;
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .form-info {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.form-top {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  transition: 250ms ease all;
+  overflow-y: scroll;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+.form-top::-webkit-scrollbar {
+  width: 0 !important;
+}
+.form-top.open {
+  height: 90vh;
+}
+@media (max-width: 480px) {
+  .form-top.open .form-info {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .form-top.open .form-info {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .form-top {
+    top: 0;
+    right: 0 !important;
+  }
+}
+@media (max-width: 480px) {
+  .form-top {
+    top: 0;
+    right: 0 !important;
+  }
+}
+.form-top .form-block__title {
+  position: relative;
+  cursor: pointer;
+}
+.form-top .form-block__title.open:before {
+  transform: rotate(180deg);
+  transition: 250ms ease all;
+  transform-origin: center center;
+}
+.form-top .form-block__title:before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  height: 15px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 15px;
+  line-height: 15px;
+  transition: 250ms ease all;
+  transform-origin: center center;
+  font-weight: 900;
+  animation: bounce 2s infinite;
+}
+@media (max-width: 480px) {
+  .form-top .form-block__title:before {
+    top: 12px;
+    right: 30px;
+    height: 15px;
+  }
+}
+
+.form-block__cta {
+  padding: 20px;
+}
+
+#pardot-form input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+#pardot-form input[type=radio] + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+#pardot-form input[type=radio] + label:before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 1px solid #565759;
+}
+#pardot-form input[type=radio]:hover + label:before {
+  background: #f1ce00;
+}
+#pardot-form input[type=radio]:checked + label:before {
+  background: #2a8947;
+}
+#pardot-form input[type=radio]:disabled + label {
+  color: #b8b8b8;
+  cursor: auto;
+}
+#pardot-form input[type=radio]:disabled + label:before {
+  box-shadow: none;
+  background: #ddd;
+}
+#pardot-form input[type=radio]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}
+
+.form-container {
+  position: relative;
+}
+
+.form-container-inner {
+  position: absolute;
+  top: 50px;
+  border: 1px solid #333;
+  background: white;
+}
+
+.form-header {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Form background color */
+form.form {
+  background-color: #FFF;
+}
+
+/* Form Header background color */
+.form-header {
+  background: #f1ce00;
+}
+
+form.form input[type=submit] {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #da2128;
+}
+
+/* Pardot Form Styles */
+body form.form {
+  padding: 20px;
+  margin: 0;
+}
+
+body form.form p label {
+  color: #333333 !important;
+  display: block;
+  margin-bottom: 2px !important;
+  font-size: 15px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  text-align: left;
+  width: auto;
+}
+
+body form.form p.form-field {
+  margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  body form.form p.form-field {
+    margin-bottom: 10px;
+  }
+}
+
+body form.form input[type=text], form.form textarea {
+  width: 100%;
+  border: solid 1px #E0E0E0;
+  background-color: #FFF;
+  padding: 5px !important;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+}
+body form.form input[type=text]:focus, form.form textarea:focus {
+  border-color: #2a8947;
+}
+
+body form.form input[type=text]:focus, form.form textarea:focus, form.form select:focus {
+  outline: none;
+}
+
+body form.form input[type=submit] {
+  background-color: #da2128;
+  border: 0;
+  color: #FFF;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  padding: 10px 25px !important;
+  margin-right: 0 !important;
+  margin-bottom: 5px !important;
+  margin-left: 0 !important;
+  border-radius: 3px;
+}
+
+body form.form p.submit {
+  text-align: center;
+  margin: 0 !important;
+}
+
+body form.form label.inline {
+  display: inline-block !important;
+  padding-left: 8px;
+  font-size: 13px;
+}
+
+body form.form textarea {
+  height: 75px;
+}
+
+body form.form select {
+  width: 100%;
+  border: solid 1px #E0E0E0;
+  background-color: #ccc;
+  padding: 5px !important;
+  font-size: 15px;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  font-family: "Merriweather", serif;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 1ex;
+  background-origin: content-box;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnMiIKICAgdmlld0JveD0iMCAwIDM1Ljk3MDk4MyAyMy4wOTE1MTgiCiAgIGhlaWdodD0iNi41MTY5Mzk2bW0iCiAgIHdpZHRoPSIxMC4xNTE4MTFtbSI+CiAgPGRlZnMKICAgICBpZD0iZGVmczQiIC8+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNyI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAyLjAxNDUxLC00MDcuMTIyMjUpIgogICAgIGlkPSJsYXllcjEiPgogICAgPHRleHQKICAgICAgIGlkPSJ0ZXh0MzMzNiIKICAgICAgIHk9IjYyOS41MDUwNyIKICAgICAgIHg9IjI5MS40Mjg1NiIKICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjQwcHg7bGluZS1oZWlnaHQ6MTI1JTtmb250LWZhbWlseTpzYW5zLXNlcmlmO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICB4bWw6c3BhY2U9InByZXNlcnZlIj48dHNwYW4KICAgICAgICAgeT0iNjI5LjUwNTA3IgogICAgICAgICB4PSIyOTEuNDI4NTYiCiAgICAgICAgIGlkPSJ0c3BhbjMzMzgiPjwvdHNwYW4+PC90ZXh0PgogICAgPGcKICAgICAgIGlkPSJ0ZXh0MzM0MCIKICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZTo0MHB4O2xpbmUtaGVpZ2h0OjEyNSU7Zm9udC1mYW1pbHk6Rm9udEF3ZXNvbWU7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpGb250QXdlc29tZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjFweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIj4KICAgICAgPHBhdGgKICAgICAgICAgaWQ9InBhdGgzMzQ1IgogICAgICAgICBzdHlsZT0iZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxIgogICAgICAgICBkPSJtIDIzNy41NjY5Niw0MTMuMjU1MDcgYyAwLjU1ODA0LC0wLjU1ODA0IDAuNTU4MDQsLTEuNDczMjIgMCwtMi4wMzEyNSBsIC0zLjcwNTM1LC0zLjY4MzA0IGMgLTAuNTU4MDQsLTAuNTU4MDQgLTEuNDUwOSwtMC41NTgwNCAtMi4wMDg5MywwIEwgMjIwLDQxOS4zOTM0NiAyMDguMTQ3MzIsNDA3LjU0MDc4IGMgLTAuNTU4MDMsLTAuNTU4MDQgLTEuNDUwODksLTAuNTU4MDQgLTIuMDA4OTMsMCBsIC0zLjcwNTM1LDMuNjgzMDQgYyAtMC41NTgwNCwwLjU1ODAzIC0wLjU1ODA0LDEuNDczMjEgMCwyLjAzMTI1IGwgMTYuNTYyNSwxNi41NDAxNyBjIDAuNTU4MDMsMC41NTgwNCAxLjQ1MDg5LDAuNTU4MDQgMi4wMDg5MiwwIGwgMTYuNTYyNSwtMTYuNTQwMTcgeiIgLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=");
+}
+
+body .red-color,
+body form.form p.error,
+body form.form span.error,
+body form.form div.error,
+body form.form p.error label {
+  margin: 0;
+  text-align: left;
+}
+
+/* Font for headlines */
+h1, h2, h3 {
+  font-family: "lato", sans-serif;
+}
+
+/* Font colors and size for headlines */
+h1 {
+  color: #333;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 0;
+  font-family: "Lato", helvetica, arial, sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  color: #da2128;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: normal;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFF;
+  margin: 0;
+}
+
+.event-details {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 30px;
+  color: #333;
+}
+@media (max-width: 480px) {
+  .event-details [class^=col-] {
+    padding-bottom: 15px;
+  }
+}
+
+.event-details i {
+  font-size: 30px;
+  padding-right: 10px;
+  position: relative;
+  top: 5px;
+  color: #da2128;
+}
+
+@media (max-width: 480px) {
+  .event-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-type {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+}
+
+.headline-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px 10px;
+}
+
+.headline {
+  padding: 0 0 15px 0;
+}
+
+.description {
+  color: #333;
+  font-size: 15px;
+}
+
+.footer {
+  padding: 35px 0 30px 0;
+  font-size: 11px;
+  color: #9E9E9E;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #FFF;
+}
+
+.footer .border-top {
+  border-top: solid 1px #E0E0E0;
+  padding-top: 20px;
+}
+
+ul.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 480px) {
+  ul.social {
+    text-align: center;
+  }
+}
+
+ul.social li {
+  display: inline-block;
+  padding: 5px;
+}
+
+ul.social i {
+  color: #da2128;
+  font-size: 20px;
+}
+
+.row-list {
+  margin: 0;
+  padding: 0;
+}
+.row-list li {
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #d8d8d8;
+  border-bottom: 0;
+  font-size: 14px;
+  line-height: 16px;
+}
+.row-list li:last-child {
+  border-bottom: 1px solid #d8d8d8;
+}
+.row-list li:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.row-list li:hover {
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+
+    </style>
+
+    <title>%%title%%</title>
 </head>
 
 <body>
 
     <!-- just paying with progress circle -->
 
-    <div class="circle">
+    <!-- <div class="circle">
             <svg
             class="progress-ring"
             width="30"
@@ -46,7 +1473,7 @@
              cx="15"
              cy="15"/>
          </svg>
-    </div>
+    </div> -->
 
     <!-- end of progress circle -->
     <div>
@@ -55,7 +1482,7 @@
 
         <div class="highlight">
 
-            <img class="background" src="https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2019/03/RY-online-courses-bg-1.jpg" alt="">
+            <img  pardot-region="highlight-background" class="background" src="https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2019/03/RY-online-courses-bg-1.jpg" alt="">
 
             <div class="container">
 
@@ -63,7 +1490,7 @@
                     <div class="col-sm-8 full-on-tab">
 
                         <div class="logo" pardot-region="Logo">
-                            <a
+                            <a 
                                 href="https://www.redandyellow.co.za/?utm_source=Pardot&amp;utm_medium=landing_page&amp;utm_campaign=digital_marketing"><img
                                     alt=""
                                     src="http://go.redandyellow.co.za/l/635981/2019-03-01/ptdt/635981/31998/Red_Yellow_25yrs.png"></a>
@@ -84,16 +1511,16 @@
                             <div class="event-details">
                                 <div class="row">
                                     <div class="col-sm-4">
-                                        <i class="fas fa-calendar-alt"></i> <span pardot-region="event-date"
+                                    <span pardot-region="event-date-icon"><i  class="fas fa-calendar-alt"></i></span> <span pardot-region="event-date"
                                         data-id="3226">10 weeks online</span>
                                     </div>
                                     <div class="col-sm-4">
-                                        <i class="fas fa-clock"></i> <span pardot-region="event-time"
+                                        <i pardot-region="event-time-icon" class="fas fa-clock"></i> <span pardot-region="event-time"
                                         data-id="3284">8
                                         - 10 hours / week</span>
                                     </div>
                                     <div class="col-sm-4">
-                                        <i class="fas fa-map-marker-alt"></i> <span pardot-region="event-location"
+                                        <i pardot-region="event-location-icon" class="fas fa-map-marker-alt"></i> <span pardot-region="event-location"
                                         data-id="3228">Online Learning</span>
                                     </div>
                                 </div>
@@ -111,182 +1538,12 @@
 
                         <div class="form-block-container">
                             <div class="form-block">
-                                <div class="form-block__title yellow">
-                                    GET MORE INFORMATION
+                                <div class="form-block__title yellow"  pardot-region="form-title">
+                                    <span>GET MORE INFORMATION</span>
                                 </div>
                                 <!-- form Info Block -->
-                                <div class="form-info">
-                                    <form accept-charset="UTF-8" method="post"
-                                        action="http://go.redandyellow.co.za/digital-marketing-course" class="form"
-                                        id="pardot-form">
-
-                                        <style type="text/css">
-                                            form.form p label {
-                                                color: #333333;
-                                                font-family: Helvetica, Arial, sans-serif;
-                                                float: none;
-                                                text-align: left;
-                                                line-height: 1em;
-                                                width: auto;
-                                            }
-
-                                            form.form p.submit {
-                                                margin-left: 5px;
-                                            }
-
-                                            form.form p.no-label {
-                                                margin-left: 50px;
-                                            }
-
-                                            form.form span.value {
-                                                margin-left: 0px;
-                                            }
-
-                                            form.form p span.description {
-                                                margin-left: 0px;
-                                            }
-
-                                            form.form p.required label,
-                                            form.form span.required label {
-                                                background-position: top left;
-                                                background: none;
-                                                padding-left: 0px;
-                                            }
-
-                                            form.form .pd-checkbox .value span {
-                                                display: block !important;
-                                            }
-
-                                            form.form .pd-radio .value span {
-                                                display: block !important;
-                                            }
-                                        </style>
-                                        <p class="form-field  first_name pd-text required required-custom    ">
-
-                                            <label class="field-label" for="635981_19552pi_635981_19552">First Name
-                                                *</label>
-
-
-                                            <input type="text" name="635981_19552pi_635981_19552"
-                                                id="635981_19552pi_635981_19552" value="" class="text" size="30"
-                                                maxlength="40" onchange=""
-                                                style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                                        </p>
-                                        <div id="error_for_635981_19552pi_635981_19552" style="display:none"></div>
-
-
-                                        <p class="form-field  last_name pd-text required required-custom    ">
-
-                                            <label class="field-label" for="635981_19554pi_635981_19554">Last Name
-                                                *</label>
-
-
-                                            <input type="text" name="635981_19554pi_635981_19554"
-                                                id="635981_19554pi_635981_19554" value="" class="text" size="30"
-                                                maxlength="80" onchange=""></p>
-                                        <div id="error_for_635981_19554pi_635981_19554" style="display:none"></div>
-
-
-                                        <p class="form-field  email pd-text required required-custom    ">
-
-                                            <label class="field-label" for="635981_19558pi_635981_19558">Email address
-                                                (that you check often) *</label>
-
-
-                                            <input type="text" name="635981_19558pi_635981_19558"
-                                                id="635981_19558pi_635981_19558" value="" class="text" size="30"
-                                                maxlength="255"
-                                                onchange="piAjax.auditEmailField(this, 635981, 19558, 562044);"></p>
-                                        <div id="error_for_635981_19558pi_635981_19558" style="display:none"></div>
-
-
-                                        <p class="form-field  phone pd-text     ">
-
-                                            <label class="field-label" for="635981_19560pi_635981_19560">Phone
-                                                Number</label>
-
-
-                                            <input type="text" name="635981_19560pi_635981_19560"
-                                                id="635981_19560pi_635981_19560" value="" class="text" size="30"
-                                                maxlength="40" onchange=""></p>
-                                        <div id="error_for_635981_19560pi_635981_19560" style="display:none"></div>
-
-
-                                        <p
-                                            class="form-field  Would_you_like_to_receive_our_weekly_newsletters_ pd-radio     ">
-
-                                            <label class="field-label" for="635981_19590pi_635981_19590">Sign up for our
-                                                weekly newsletter?</label>
-
-
-                                            <span class="value"><span class="" ><input type="radio"
-                                                        name="635981_19590pi_635981_19590[]"
-                                                        id="635981_19590pi_635981_19590_187558_187558" value="187558"
-                                                        onchange=""><label class="inline"
-                                                        for="635981_19590pi_635981_19590_187558_187558"> Yes sign me
-                                                        up!</label></span><span class="" ><input type="radio"
-                                                        name="635981_19590pi_635981_19590[]"
-                                                        id="635981_19590pi_635981_19590_187560_187560" value="187560"
-                                                        onchange=""><label class="inline"
-                                                        for="635981_19590pi_635981_19590_187560_187560"> No, I don't
-                                                        want career boosting tips</label></span><span class=""
-                                                   ><input type="radio" name="635981_19590pi_635981_19590[]"
-                                                        id="635981_19590pi_635981_19590_187562_187562" value="187562"
-                                                        onchange=""><label class="inline"
-                                                        for="635981_19590pi_635981_19590_187562_187562"> I've already
-                                                        signed up</label></span></span>
-
-                                        </p>
-                                        <div id="error_for_635981_19590pi_635981_19590" style="display:none"></div>
-
-
-                                        <p class="form-field  Source_URL pd-hidden  hidden   ">
-
-
-                                            <input type="hidden" name="635981_19692pi_635981_19692"
-                                                id="635981_19692pi_635981_19692" value=""></p>
-                                        <div id="error_for_635981_19692pi_635981_19692" style="display:none"></div>
-
-
-
-
-                                        <p
-                                            style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
-                                            <label for="pi_extra_field">Comments</label>
-                                            <input type="text" name="pi_extra_field" id="pi_extra_field"></p>
-
-
-                                        <!-- forces IE5-8 to correctly submit UTF8 content  -->
-                                        <input name="_utf8" type="hidden" value="☃">
-                                        <p class="submit">
-                                            <input type="submit" accesskey="s" value="GET YOUR COURSE INFOPACK"></p>
-                                        <p><em><small>100% <a href="https://www.redandyellow.co.za/privacy-policy/"
-                                                        style="text-decoration:underline;color:#da2128;"
-                                                        target="_top">privacy</a> guaranteed. By filling in this form,
-                                                    you agree to Red &amp; Yellow contacting you about online courses.
-                                                    Your information will never be
-                                                    shared.&nbsp;</small></em><em><small>You can opt-out at
-                                                </small></em><em><small>anytime</small></em><em><small>. We'll miss you
-                                                    though :(&nbsp;</small></em></p>
-
-
-
-
-                                        <script type="text/javascript">
-                                            //<![CDATA[
-
-                                            var anchors = document.getElementsByTagName("a");
-                                            for (var i = 0; i < anchors.length; i++) {
-                                                var anchor = anchors[i];
-                                                if (anchor.getAttribute("href") && !anchor.getAttribute("target")) {
-                                                    anchor.target = "_top";
-                                                }
-                                            }
-
-                                            //]]>
-                                        </script><input type="hidden" name="hiddenDependentFields"
-                                            id="hiddenDependentFields" value="">
-                                    </form>
+                                <div class="form-info" >
+                                        %%content%%
                                 </div>
 
                                 <!-- End of form Info -->
@@ -295,14 +1552,14 @@
                             <!-- Sections below the form -->
                             <!-- graduate -->
                             <div class="graduate">
-                                <h2 class=" text-red">What graduates have to say</h2>
+                                <h2 class=" text-red" pardot-region="graduate-title">What graduates have to say</h2>
                                 <div class="profile">
-                                    <span class="profile__img">
+                                    <span class="profile__img" pardot-region="graduate-img">
                                         <img src="https://storage.pardot.com/635981/32004/AlanEdgar.png" alt="">
                                     </span>
-                                    <h1 class="profile__title ">Alan Edgar</h1>
-                                    <h2 class="profile__sub-title">Executive Creative Director, TBWA</h2>
-                                    <span class="profile__copy">
+                                    <h1 class="profile__title " pardot-region="graduate-name">Alan Edgar</h1>
+                                    <h2 class="profile__sub-title" pardot-region="graduate-position">Executive Creative Director, TBWA</h2>
+                                    <span class="profile__copy" pardot-region="graduate-quote">
                                         <em>"This course has been incredible. I'm going to be able to use all the concepts I've learned in a new business that my wife is starting and excited to see how it will positively impact in practice. Please extend my thanks to all the lecturers and markers."</em>
                                     </span>
                                 </div>
@@ -310,21 +1567,21 @@
 
                             <!-- contributor -->
                             <div class="contributor">
-                                <h2 class=" text-red">Meet the course contributor</h2>
+                                <h2 class=" text-red" pardot-region="contributor-title">Meet the course contributor</h2>
                                 <div class="profile">
-                                    <span class="profile__img">
+                                    <span class="profile__img" pardot-region="contributor-img">
                                         <img src="https://storage.pardot.com/635981/32004/AlanEdgar.png" alt="">
                                     </span>
-                                    <h1 class="profile__title ">Rob Stokes</h1>
-                                    <h2 class="profile__sub-title">Entrepreneur and digital marketing guru</h2>
-                                    <span class="profile__copy">
+                                    <h1 class="profile__title " pardot-region="contributor-name">Rob Stokes</h1>
+                                    <h2 class="profile__sub-title" pardot-region="contributor-position">Entrepreneur and digital marketing guru</h2>
+                                    <span class="profile__copy" pardot-region="contributor-quote">
                                         <em>"Rob Stokes is an entrepreneur with over 20 years of digital marketing experience for some of the biggest brands in the world. In 1999, he foundeaward-winningng digital agency, Quirk, and built it into one of the largest agencies in Africa before selling it to London listed global leader, WPP, in 2014."</em>
                                     </span>
                                 </div>
                             </div>
 
                             <div class="form-block__cta">
-                                <a href="mailto:registrations@redandyellow.co.za?subject=I%20want%20you%20to%20call%20me%20back"
+                                <a pardot-region="form-block-cta-link" href="mailto:registrations@redandyellow.co.za?subject=I%20want%20you%20to%20call%20me%20back"
                                     class="cta-btn cta-btn--red full"
                                     onclick="gtag('event', 'Click', { 'event_category': 'Email' });">Request a
                                     call back</a>
@@ -332,9 +1589,9 @@
                             
                             <div>
                                 <div class="info-card pad-x20 light-gray-bg">
-                                    <h1 class="info-card__title">Lorem, ipsum dolor.</h1>
-                                    <p class="info-card__intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi aut aperiam maxime, minus mollitia recusandae maiores temporibus non repudiandae nulla ad modi soluta ipsum cupiditate.</p>
-                                    <a href="" class="info-card__cta"></a>
+                                    <h1 class="info-card__title" pardot-region="gray-block-title">Lorem, ipsum dolor.</h1>
+                                    <p class="info-card__intro" pardot-region="gray-block-intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi aut aperiam maxime, minus mollitia recusandae maiores temporibus non repudiandae nulla ad modi soluta ipsum cupiditate.</p>
+                                    <a href="" class="info-card__cta" pardot-region="gray-block-link"></a>
                                 </div>
                             </div>
 
@@ -343,7 +1600,6 @@
                     </div>
 
                     <!-- END OF THE FORM -->
-
 
                 </div>
 
@@ -357,8 +1613,8 @@
         <div class="container mt50">
             <div class="row">
                 <div class="col-sm-8">
-                    <h2>Get the Digital Marketing Certificate that guarantees career success. </h2>
-                    <p>In just 10 short weeks and over 8 modules you'll get the practical skills to implement a winning
+                    <h2 pardot-region="section-one-title">Get the Digital Marketing Certificate that guarantees career success. </h2>
+                    <p pardot-region="section-one-intro">In just 10 short weeks and over 8 modules you'll get the practical skills to implement a winning
                         digital marketing strategy. This course is perfect for anyone wanting to effectively market
                         their brand or business</p>
                 </div>
@@ -372,11 +1628,11 @@
 
                         <div class="col-sm-4">
                             <div class="info-card pad-x10">
-                                <span class="info-card__icon">
+                                <span class="info-card__icon" pardot-region="benefit-one-icon">
                                     <i class="fas fa-cogs"></i>
                                 </span>
-                                <h1 class="info-card__title">Lorem, ipsum dolor.</h1>
-                                <p class="info-card__intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                <h1 class="info-card__title" pardot-region="benefit-one-title">Lorem, ipsum dolor.</h1>
+                                <p class="info-card__intro" pardot-region="benefit-one-intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Nisi aut aperiam maxime, minus mollitia recusandae maiores temporibus non
                                     repudiandae nulla ad modi soluta ipsum cupiditate.</p>
                                 <!-- <a href="" class="info-card__cta"></a> -->
@@ -385,11 +1641,11 @@
 
                         <div class="col-sm-4">
                             <div class="info-card pad-x10">
-                                <span class="info-card__icon">
+                                <span class="info-card__icon" pardot-region="benefit-two-icon">
                                     <i class="fas fa-chart-pie"></i>
                                 </span>
-                                <h1 class="info-card__title">Lorem, ipsum dolor.</h1>
-                                <p class="info-card__intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                <h1 class="info-card__title" pardot-region="benefit-two-title">Lorem, ipsum dolor.</h1>
+                                <p class="info-card__intro" pardot-region="benefit-two-intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Nisi aut aperiam maxime, minus mollitia recusandae maiores temporibus non
                                     repudiandae nulla ad modi soluta ipsum cupiditate.</p>
                                 <!-- <a href="" class="info-card__cta"></a> -->
@@ -398,11 +1654,11 @@
 
                         <div class="col-sm-4">
                             <div class="info-card pad-x10">
-                                <span class="info-card__icon">
+                                <span class="info-card__icon" pardot-region="benefit-three-icon">
                                     <i class="fas fa-desktop"></i>
                                 </span>
-                                <h1 class="info-card__title">Lorem, ipsum dolor.</h1>
-                                <p class="info-card__intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                <h1 class="info-card__title" pardot-region="benefit-three-title">Lorem, ipsum dolor.</h1>
+                                <p class="info-card__intro" pardot-region="benefit-three-intro">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Nisi aut aperiam maxime, minus mollitia recusandae maiores temporibus non
                                     repudiandae nulla ad modi soluta ipsum cupiditate.</p>
                                 <!-- <a href="" class="info-card__cta"></a> -->
@@ -418,8 +1674,8 @@
             <div class="container mt50">
                 <div class="row">
                     <div class="col-sm-8 full-on-tab">
-                        <h1 class="section-title--sub ">Trusted By</h1>
-                        <div class="slider">
+                        <h1 class="section-title--sub " pardot-region="trustee-logo-title">Trusted By</h1>
+                        <div class="slider"  pardot-region="trustee-logo-logos">
                             <div class="corporates-logo">
                                 <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92w/635981/32598/WPP.png"
                                     alt="">
@@ -464,19 +1720,19 @@
 
         <div class="container mt50">
             <div class="row">
-                <div class="col-sm-8">
-                    <h2>Get the Digital Marketing Certificate that guarantees career success. </h2>
-                    <p>In just 10 short weeks and over 8 modules you'll get the practical skills to implement a winning
+                <div class="col-sm-8" >
+                    <h2 pardot-region="section-two-title">Get the Digital Marketing Certificate that guarantees career success. </h2>
+                    <p pardot-region="section-two-intro">In just 10 short weeks and over 8 modules you'll get the practical skills to implement a winning
                         digital marketing strategy. This course is perfect for anyone wanting to effectively market
                         their brand or business</p>
                 </div>
                 <div class="col-sm-8 mt50 full-on-tab">
-                    <h1 class="section-title--sub text-red">What you'll learn:</h1>
+                    <h1 class="section-title--sub text-red"  pardot-region="what-youll-learn-title">What you'll learn:</h1>
                     <div>
                         <div class="row pad-x-5">
 
                             <div class="col-sm-6 ">
-                                <div class="lesson-card">
+                                <div class="lesson-card" pardot-region="lesson-card-one">
                                     <!-- <span class="lesson-card--img">
                                         <i class="fas fa-desktop"></i>
                                     </span> -->
@@ -487,7 +1743,7 @@
                             </div>
 
                             <div class="col-sm-6">
-                                <div class="lesson-card">
+                                <div class="lesson-card" pardot-region="lesson-card-two">
                                     <!-- <span class="lesson-card--img">
                                         <i class="fas fa-calendar-alt"></i>
                                     </span> -->
@@ -498,7 +1754,7 @@
                             </div>
 
                             <div class="col-sm-6">
-                                <div class="lesson-card">
+                                <div class="lesson-card" pardot-region="lesson-card-three">
                                     <!-- <span class="lesson-card--img">
                                         <i class="fas fa-desktop"></i>
                                     </span> -->
@@ -512,8 +1768,8 @@
                     </div>
                 </div>
                 <div class="col-sm-8 mt50 full-on-tab">
-                    <h1 class="section-title--sub text-red">What you'll learn:</h1>
-                    <div>
+                    <h1 class="section-title--sub text-red"  pardot-region="section-three-title">What you'll learn:</h1>
+                    <div pardot-region="section-three-list">
                         <ul class="row-list">
                             <li>A hard-copy of our globally read 6th Edition eMarketing textbook</li>
                             <li>An industry-sought after Certificate of Completion from Red & Yellow</li>
@@ -531,39 +1787,39 @@
 
         <div class="container mt50">
 
-                <h1 class="section-title--sub text-red">Lorem ipsum dolor sit amet.</h1>
+                <h1 class="section-title--sub text-red" pardot-region="modules-title">Lorem ipsum dolor sit amet.</h1>
     
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="row">
                             <div class="col-sm-3">
-                                    <div class="module-block">
-                                        <h1 class="module-block__title text-red">Module 01</h1>
-                                        <p class="module-block__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                                            voluptates consectetur pariatur eveniet vitae magni.</p>
-                                    </div>
+                                <div class="module-block">
+                                    <h1 class="module-block__title text-red" pardot-region="modules-one-title">Module 01</h1>
+                                    <p class="module-block__intro" pardot-region="modules-one-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                                        voluptates consectetur pariatur eveniet vitae magni.</p>
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="module-block">
-                                        <h1 class="module-block__title text-red">Module 01</h1>
-                                        <p class="module-block__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                                            voluptates consectetur pariatur eveniet vitae magni.</p>
-                                    </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="module-block">
+                                    <h1 class="module-block__title text-red" pardot-region="modules-two-title">Module 01</h1>
+                                    <p class="module-block__intro" pardot-region="modules-two-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                                        voluptates consectetur pariatur eveniet vitae magni.</p>
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="module-block">
-                                        <h1 class="module-block__title text-red">Module 01</h1>
-                                        <p class="module-block__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                                            voluptates consectetur pariatur eveniet vitae magni.</p>
-                                    </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="module-block">
+                                    <h1 class="module-block__title text-red" pardot-region="modules-three-title">Module 01</h1>
+                                    <p class="module-block__intro" pardot-region="modules-three-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                                        voluptates consectetur pariatur eveniet vitae magni.</p>
                                 </div>
-                                <div class="col-sm-3">
-                                    <div class="module-block">
-                                        <h1 class="module-block__title text-red">Module 01</h1>
-                                        <p class="module-block__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                                            voluptates consectetur pariatur eveniet vitae magni.</p>
-                                    </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="module-block">
+                                    <h1 class="module-block__title text-red" pardot-region="modules-four-title">Module 01</h1>
+                                    <p class="module-block__intro" pardot-region="modules-four-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                                        voluptates consectetur pariatur eveniet vitae magni.</p>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -579,26 +1835,26 @@
                     <div class="col-sm-12">
                         <div class="quotes-block">
                             <div class="quote">
-                                <div class="quote__img">
+                                <div class="quote__img" pardot-region="modules-quote-one-img">
                                     <img src="https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2019/02/Stephen-Sandmann.jpeg"
                                         alt="">
                                 </div>
                                 <div class="quote__copy">
                                     <!-- <h1 class="quote__copy__title">Grant Webster</h1> -->
-                                    <p class="quote__copy__intro">Over the course of my career, I have always used Red & Yellow as a first filter for advertising and marketing related hires, looking at the institution’s graduates first. Why? because they are always the ones who had business and commercial understanding over and above the advertising and creative side.</p>
-                                    <h2 class="quote__copy__subtitle">- Grant Webster, former heavy-hitter at Makro, Takealot, Look n Listen, Toy Kingdom, WeFix.</h2>
+                                    <p class="quote__copy__intro" pardot-region="modules-quote-one-copy-intro">Over the course of my career, I have always used Red & Yellow as a first filter for advertising and marketing related hires, looking at the institution’s graduates first. Why? because they are always the ones who had business and commercial understanding over and above the advertising and creative side.</p>
+                                    <h2 class="quote__copy__subtitle" pardot-region="modules-quote-one-copy-subtitle">- Grant Webster, former heavy-hitter at Makro, Takealot, Look n Listen, Toy Kingdom, WeFix.</h2>
                                 </div>
                             </div>
                             <div class="quote">
-                                <div class="quote__img">
+                                <div class="quote__img" pardot-region="modules-quote-two-img">
                                     <img src="https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/uploads/2019/02/Stephen-Sandmann.jpeg"
                                         alt="">
                                 </div>
                                 <div class="quote__copy">
-                                    <h1 class="quote__copy__title">Sagwadi Maluleke</h1>
-                                    <p class="quote__copy__intro">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    <h1 class="quote__copy__title" pardot-region="modules-quote-two-title">Sagwadi Maluleke</h1>
+                                    <p class="quote__copy__intro" pardot-region="modules-quote-two-intro">Lorem ipsum dolor sit, amet consectetur adipisicing
                                         elit. Blanditiis nihil, sequi adipisci aut nam inventore.</p>
-                                    <h2 class="quote__copy__subtitle">Lorem, ipsum dolor.</h2>
+                                    <h2 class="quote__copy__subtitle" pardot-region="modules-quote-two-subtitle">Lorem, ipsum dolor.</h2>
                                 </div>
                             </div>
                         </div>
@@ -609,17 +1865,17 @@
         </div>
 
         <div class="container mt50">
-            <a href="mailto:registrations@redandyellow.co.za?subject=I%20want%20you%20to%20call%20me%20back"
+            <a pardot-region="call-to-action-link-one" href="mailto:registrations@redandyellow.co.za?subject=I%20want%20you%20to%20call%20me%20back"
                 class="cta-btn cta-btn--yellow" onclick="gtag('event', 'Click', { 'event_category': 'Email' });">Request
                 a call back</a>
 
-            <a href="mailto:registrations@redandyellow.co.za?subject=I%20want%20you%20to%20call%20me%20back"
+            <a pardot-region="call-to-action-link-two" href="mailto:registrations@redandyellow.co.za?subject=I%20want%20you%20to%20call%20me%20back"
                 class="cta-btn cta-btn--red" onclick="gtag('event', 'Click', { 'event_category': 'Email' });">Request a
                 call back</a>
         </div>
 
 
-        <div class="container mt50">
+        <div class="container mt50" pardot-region="video">
             <div class="row">
                 <div class="col-sm-6 full-on-tab">
                     <div class="video-card">
@@ -647,12 +1903,12 @@
 
         <div class="container">
             <div class="endorsed-by mt50">
-                <span class="endorsers__title">Endorsed by</span>
-                <div class="endorsers">
-                    <div class="corporates-logo">
+                <span class="endorsers__title" pardot-region="endorsed-by-title">Endorsed by</span>
+                <div class="endorsers" pardot-repeatable>
+                    <div class="corporates-logo" pardot-region="endorsed-by-logo-one" pardot-removable="subheader" pardot-region-type="image">
                         <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q92w/635981/32598/WPP.png" alt="">
                     </div>
-                    <div class="corporates-logo">
+                    <div class="corporates-logo" pardot-region="endorsed-by-logo-two" pardot-region-type="image">
                         <img src="http://go.redandyellow.co.za/l/635981/2019-03-08/q91w/635981/32568/Absa.png" alt="">
                     </div>
                 </div>
@@ -669,31 +1925,28 @@
                             Registration No.: 2005/HE07/002<br>
                             97 Durham Avenue, 2nd Floor, Salt River Cape Town, 7925, South Africa | 0861 878 258</p>
                     </div>
-                    <div class="col-sm-4 text-right" pardot-region="social-media">
+                    <div class="col-sm-4 text-right">
                         <ul class="social">
                             <li>
-                                <a href="http://www.facebook.com/redandyellowed" target="_blank"><i
+                                <a pardot-region="social-media-facebook" href="http://www.facebook.com/redandyellowed" target="_blank"><i
                                         class="fab fa-facebook-f"></i></a>
                             </li>
                             <li>
-                                <a href="http://www.twitter.com/redandyellowed" target="_blank"><i
+                                <a pardot-region="social-media-twitter" href="http://www.twitter.com/redandyellowed" target="_blank"><i
                                         class="fab fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="http://www.instagram.com/redandyellowed" target="_blank"><i
+                                <a pardot-region="social-media-facebook-instagram" href="http://www.instagram.com/redandyellowed" target="_blank"><i
                                         class="fab fa-instagram"></i></a>
                             </li>
                             <li>
-                                <a href="http://www.instagram.com/redandyellowed" target="_blank"> <i
+                                <a pardot-region="social-media-facebook-linkedin" href="http://www.instagram.com/redandyellowed" target="_blank"> <i
                                         class="fab fa-linkedin-in"></i></a>
                             </li>
                             <li>
-                                <a href="https//www.redandyellow.co.za" target="_blank"> <i
+                                <a pardot-region="social-media-facebook-website" href="https//www.redandyellow.co.za" target="_blank"> <i
                                         class="fas fa-globe-africa"></i></a>
                             </li>
-
-
-
                         </ul>
                     </div>
                 </div>
@@ -707,10 +1960,240 @@
 
     <!-- Scripts  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
-    <script src="js/index.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+
+    <script> 
+        
+            var isMobile = false; //initiate as false
+            // device detection
+            if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+                || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+                isMobile = true;
+            }
+
+
+
+            // Slick slider for the 
+            $(".slider").slick({
+
+            // normal options...
+            infinite: true,
+            slidesToShow: 4,
+            autoplay: true,
+            autoplaySpeed: 2000,
+
+
+            // the breakpoints
+            responsive: [{
+
+                breakpoint: 1024,
+                settings: {
+                slidesToShow: 3,
+                infinite: true
+                }
+
+            }, {
+
+                breakpoint: 600,
+                settings: {
+                slidesToShow: 2,
+                dots: false
+                }
+
+            }, {
+
+                breakpoint: 480,
+                // settings: "unslick" // destroys slick
+                settings: {
+                slidesToShow: 1,
+                dots: false
+                }
+            }]
+
+
+            });
+
+
+            // Slick slider for the endorsers 
+            $(".endorsers").slick({
+                infinite: true,
+                slidesToShow: 2,
+                autoplay: false,
+                autoplaySpeed: 2000,
+
+                
+            // the breakpoints
+            responsive: [{
+
+                breakpoint: 1024,
+                settings: {
+                slidesToShow: 2,
+                infinite: true
+                }
+
+            }, {
+
+                breakpoint: 600,
+                settings: {
+                slidesToShow: 2,
+                dots: false
+                }
+
+            }, {
+
+                breakpoint: 480,
+                // settings: "unslick" // destroys slick
+                settings: {
+                slidesToShow: 1,
+                dots: false
+                }
+            }]
+
+            });
+
+            // Slick slider for the quotes 
+            $(".quotes-block").slick({
+                infinite: true,
+                slidesToShow: 2,
+                autoplay: true,
+                autoplaySpeed: 2000,
+
+                // the breakpoints
+                responsive: [{
+                    breakpoint: 480,
+                    settings: {
+                    slidesToShow: 1,
+                    dots: false
+                    }
+                },{
+                    breakpoint: 780,
+                    settings: {
+                    slidesToShow: 1,
+                    dots: false
+                    }
+                }
+            ]
+
+            });
+
+
+            // Video play on icon click
+            $('body').on('click','.video-card__play', function(){
+                var video = $(this).siblings( ".video" );
+                var image = $(this).siblings( ".video-card__place-holder" );
+                var youtubeLink =  $(video).data('src');
+                var iframe = video.find('iframe');
+                iframe.attr('src', youtubeLink + '?autoplay=1' ).show();
+                $(this).delay(200).hide(200);
+                image.hide();
+            });
+
+
+            // Scroll position check
+
+            var OriginalformBlockHeight = $('.form-block').outerHeight();
+
+            $(window).bind('scroll', function() {
+                var scrollTop     = $(window).scrollTop();
+                var formTop = $('.form-block-container').prev().offset().top; //get the offset top of the form block
+                var heightOfPrev = $('.form-block-container').prev().outerHeight();
+                var formBlockHeight = $('.form-block').outerHeight();
+                var FormtopPosition = formTop - scrollTop + heightOfPrev + formBlockHeight + 30;
+                var prviousElementTopPosition = formTop - scrollTop + heightOfPrev;
+                var formfixed = $('.form-block').hasClass('form-top');
+
+
+                // Get the distace of the form to the right
+                var formRight = $(document).width() - ($('.form-block').offset().left + $('.form-block').width());
+                if(isMobile){
+                    formRight = 0;
+                }
+
+
+                // For desktop
+                // if(!isMobile){
+                    if(FormtopPosition < 20 && !formfixed ){
+                        // fix the form block to the top
+                        $('.form-block').addClass('form-top').css('right', formRight);
+                        
+                        // Collapse the form info but add the border on the form
+                        $('.form-info').hide().css({'border': '1px solid #d8d8d8'});
+
+                        // add the height of the form block as body padding
+                        $('.form-block-container').css('padding-top',formBlockHeight + 30);
+
+                    }else if((prviousElementTopPosition) > -(OriginalformBlockHeight) && formfixed ) {
+                        // release the form block from the top
+                        $('.form-block').removeClass('form-top').css({'right': 'auto'});
+
+                        // show the form info and hide the border
+                        $('.form-info').show().css({'border': 'none'});
+
+                        // add the height of the form block as body padding
+                        $('.form-block-container').css('padding-top', 0);
+                    }
+                // }
+
+                
+                
+                
+            });
+
+
+            // Show toogle form info
+
+            $('body').on('click', '.form-top .form-block__title', function(){
+                $('.form-info').slideToggle();
+                $(this).toggleClass('open');
+                $('.form-top').toggleClass('open');
+            });
+
+
+
+
+            // Progress prototype
+
+
+                var circle = document.querySelector('circle');
+                var radius = circle.r.baseVal.value;
+                var circumference = radius * 2 * Math.PI;
+
+                circle.style.strokeDasharray = `${circumference} ${circumference}`;
+                circle.style.strokeDashoffset = `${circumference}`;
+                
+                function setProgress(percent) {
+                const offset = circumference - percent / 100 * circumference;
+                circle.style.strokeDashoffset = offset;
+                }
+
+                setProgress(0);
+
+                $(window).bind('scroll', function() {
+
+                    var docHeight = $(document).height();
+                    var scrollposition = $(document).scrollTop();
+                    var windowHeight = window.innerHeight;
+
+                    var perc = (scrollposition + windowHeight) / docHeight * 100;
+                    console.log(perc - 16);
+                    if (perc < 17){
+                        setProgress(perc/2); 
+                    }else{
+                        setProgress(perc);
+                    }
+
+                    if(perc > 95){
+                        circle.style.fill = `#f1ce00`;
+                    }else{
+                        circle.style.fill = `transparent`;
+                    }
+                    
+
+                });
+    
+    </script>
 
 </body>
 
