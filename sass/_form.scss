@@ -237,6 +237,9 @@
             4px -6px 0 white,
             4px -8px 0 white;
           transform: rotate(45deg);
+          @include breakpoint(mobileonly) {
+            top: 9px;
+          }
         }
       }
 }
