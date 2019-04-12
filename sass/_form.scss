@@ -185,6 +185,7 @@
         & + label:before {
           content: '';
           margin-right: 10px;
+          margin-top: -3px;
           display: inline-block;
           vertical-align: text-top;
           width: 20px;
@@ -225,7 +226,7 @@
           content: '';
           position: absolute;
           left: 5px;
-          top: 15px;
+          top: 12px;
           background: white;
           width: 2px;
           height: 2px;
@@ -238,7 +239,7 @@
             4px -8px 0 white;
           transform: rotate(45deg);
           @include breakpoint(mobileonly) {
-            top: 9px;
+            top: 7px;
           }
         }
       }
@@ -400,6 +401,9 @@ form.form p.no-label {
 
 form.form span.value {
     margin-left: 0px;
+    @include breakpoint(mobileonly) {
+        margin-top: 10px;
+    }
 }
 
 form.form p span.description {

@@ -27,7 +27,6 @@
         @include breakpoint(mobileonly){
             display: block;
             margin-left: auto;
-            margin-right: auto;
         }
 
         @include breakpoint(tabletup){
