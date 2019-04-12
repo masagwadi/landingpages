@@ -15,7 +15,8 @@
     }
 
     &__img{
-        display: inline-block;
+        // display: inline-block;
+        float:left;
         height: 100px;
         width: 100px;
         border-radius: 50%;
@@ -30,8 +31,8 @@
         }
 
         @include breakpoint(tabletup){
-            margin-top: 25%;
-            transform: translateY(-50%);
+            // margin-top: 25%;
+            // transform: translateY(-50%);
         }
 
         img{
@@ -103,9 +104,4 @@
             color: $black;
         }
     }
-}
-
-
-.quote-bg{
-    background-color: #d8d8d8;
 }

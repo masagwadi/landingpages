@@ -1,10 +1,12 @@
 .cta-btn{
-    padding: 15px 80px 15px 30px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 24px;
+    padding: 10px 80px 10px 30px;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
     transition: 250ms ease all;
     display: inline-block;
+    border-radius: 5px;
+    text-transform: uppercase;
 
     @include breakpoint(mobileonly) {
         padding: 15px 80px 15px 15px;
@@ -26,22 +28,26 @@
     }
 
     &--yellow{
-        background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 92% 10px #f1ce00;
+        background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 96% 7px #f1ce00;
         border: 2px solid #f1ce00;
         color: #ffffff;
+        background-size: 25px;
         &:hover{
             color: #000000;
-            background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover.png) no-repeat 92% 10px #ffffff;
+            background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover.png) no-repeat 96% 7px #ffffff;
+            background-size: 25px;
         }
     }
 
     &--red{
-        background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 92% 10px #da2128;
+        background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 96% 7px #da2128;
         border: 2px solid #da2128;
         color: #ffffff;
+        background-size: 25px;
         &:hover{
             color: #000000;
-            background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover-red.png) no-repeat 92% 10px #ffffff;
+            background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover-red.png) no-repeat 96% 7px #ffffff;
+            background-size: 25px;
         }
     }
 }

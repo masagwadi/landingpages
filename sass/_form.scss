@@ -377,3 +377,48 @@ form.form input[type=submit] {
       text-align: left;
  
     }
+
+
+
+ /* FORM inline styling */
+ form.form p label {
+    color: #333333;
+    font-family: Helvetica, Arial, sans-serif;
+    float: none;
+    text-align: left;
+    line-height: 1em;
+    width: auto;
+}
+
+form.form p.submit {
+    margin-left: 5px;
+}
+
+form.form p.no-label {
+    margin-left: 50px;
+}
+
+form.form span.value {
+    margin-left: 0px;
+}
+
+form.form p span.description {
+    margin-left: 0px;
+}
+
+form.form p.required label,
+form.form span.required label {
+    background-position: top left;
+    background: none;
+    padding-left: 0px;
+}
+
+form.form .pd-checkbox .value span {
+    display: block !important;
+}
+
+form.form .pd-radio .value span {
+    display: block !important;
+}
+
+/* END OF FORM inline styling */

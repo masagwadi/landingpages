@@ -69,6 +69,10 @@
      margin-top: 50px;
  }
 
+ .mt20{
+     margin-top: 20px;
+ }
+
 //  PADDING
  .pad-x10 {
      padding: 10px;
@@ -76,6 +80,18 @@
 
  .pad-x20{
      padding: 20px;
+ }
+
+ .pt20{
+     padding-top: 20px;
+ }
+
+ .pb20{
+     padding-bottom: 20px;
+ }
+
+ .pt50{
+     padding-top: 50px;
  }
 
 
@@ -277,4 +293,12 @@
         stroke: $red !important;
         transition: 250ms ease all;
     }
+}
+
+.ligiht-gray-bg{
+    background-color: #f1f1f1;
+}
+
+.text-align-right{
+    text-align: right;
 }

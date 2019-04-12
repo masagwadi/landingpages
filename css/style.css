@@ -432,12 +432,28 @@ body {
   margin-top: 50px;
 }
 
+.mt20 {
+  margin-top: 20px;
+}
+
 .pad-x10 {
   padding: 10px;
 }
 
 .pad-x20 {
   padding: 20px;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.pb20 {
+  padding-bottom: 20px;
+}
+
+.pt50 {
+  padding-top: 50px;
 }
 
 .light-gray-bg {
@@ -593,6 +609,14 @@ body {
   transition: 250ms ease all;
 }
 
+.ligiht-gray-bg {
+  background-color: #f1f1f1;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
 .lesson-card {
   display: table;
   width: 100%;
@@ -617,7 +641,8 @@ body {
   display: table-cell;
   height: 50px;
   padding: 10px;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 18px;
   vertical-align: top;
 }
 
@@ -677,7 +702,7 @@ body {
   text-align: center;
   padding: 10px 50px 10px 50px;
   font-size: 12px;
-  list-style: 16px;
+  line-height: 16px;
 }
 
 .info-card {
@@ -742,7 +767,7 @@ body {
   }
 }
 .quote__img {
-  display: inline-block;
+  float: left;
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -756,12 +781,6 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-@media (min-width: 481px) {
-  .quote__img {
-    margin-top: 25%;
-    transform: translateY(-50%);
   }
 }
 .quote__img img {
@@ -829,10 +848,6 @@ body {
   color: #000000;
 }
 
-.quote-bg {
-  background-color: #d8d8d8;
-}
-
 @media (max-width: 480px) {
   .module-block {
     margin-bottom: 20px;
@@ -845,17 +860,19 @@ body {
   margin-bottom: 5px;
 }
 .module-block__intro {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .cta-btn {
-  padding: 15px 80px 15px 30px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
+  padding: 10px 80px 10px 30px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
   transition: 250ms ease all;
   display: inline-block;
+  border-radius: 5px;
+  text-transform: uppercase;
 }
 @media (max-width: 480px) {
   .cta-btn {
@@ -875,22 +892,26 @@ body {
   width: 100%;
 }
 .cta-btn--yellow {
-  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 92% 10px #f1ce00;
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 96% 7px #f1ce00;
   border: 2px solid #f1ce00;
   color: #ffffff;
+  background-size: 25px;
 }
 .cta-btn--yellow:hover {
   color: #000000;
-  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover.png) no-repeat 92% 10px #ffffff;
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover.png) no-repeat 96% 7px #ffffff;
+  background-size: 25px;
 }
 .cta-btn--red {
-  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 92% 10px #da2128;
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 96% 7px #da2128;
   border: 2px solid #da2128;
   color: #ffffff;
+  background-size: 25px;
 }
 .cta-btn--red:hover {
   color: #000000;
-  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover-red.png) no-repeat 92% 10px #ffffff;
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover-red.png) no-repeat 96% 7px #ffffff;
+  background-size: 25px;
 }
 
 .form-block-container {
@@ -1235,6 +1256,48 @@ body form.form p.error label {
   text-align: left;
 }
 
+/* FORM inline styling */
+form.form p label {
+  color: #333333;
+  font-family: Helvetica, Arial, sans-serif;
+  float: none;
+  text-align: left;
+  line-height: 1em;
+  width: auto;
+}
+
+form.form p.submit {
+  margin-left: 5px;
+}
+
+form.form p.no-label {
+  margin-left: 50px;
+}
+
+form.form span.value {
+  margin-left: 0px;
+}
+
+form.form p span.description {
+  margin-left: 0px;
+}
+
+form.form p.required label,
+form.form span.required label {
+  background-position: top left;
+  background: none;
+  padding-left: 0px;
+}
+
+form.form .pd-checkbox .value span {
+  display: block !important;
+}
+
+form.form .pd-radio .value span {
+  display: block !important;
+}
+
+/* END OF FORM inline styling */
 /* Font for headlines */
 h1, h2, h3 {
   font-family: "lato", sans-serif;
