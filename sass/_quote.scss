@@ -5,7 +5,7 @@
 
 .quote{
     max-width: 500px;
-    padding-top: 60px;
+    // padding-top: 60px;
     // padding-bottom: 60px;
 
     @include breakpoint(tabletdown){
@@ -22,8 +22,8 @@
         border-radius: 50%;
         overflow: hidden; 
         vertical-align: top;
-        margin-top: 10px;
-        margin-right: 20px;
+        margin-top: 5px;
+        margin-right: 30px;
         @include breakpoint(mobileonly){
             display: block;
             margin-left: auto;
@@ -45,13 +45,14 @@
     &__copy{
 
         display: inline-block;
-        max-width: 400px;
+        // max-width: 400px;
         padding: 10px;
         color: $black;
+        float: left;
 
         @include breakpoint(tabletup){
-            margin-top: 25%;
-            transform: translateY(-50%);
+            // margin-top: 25%;
+            // transform: translateY(-50%);
         }
 
         &__title{
@@ -60,12 +61,14 @@
             text-transform: uppercase;
             font-weight: bold;
             font-family: 'Lato', helvetica, arial, sans-serif;
+            float: left;
         }
 
         &__intro{
             font-size: 14px;
             line-height: 22px;
-            max-width: 350px;
+            float: left;
+            // max-width: 350px;
             padding-left: 40px;
             padding-right: 30px;
             position: relative;
@@ -73,10 +76,14 @@
             padding-bottom: 10px;
             &:before{
                 font-family: "Font Awesome 5 Free" !important;
-                content: '\f10d';
+                content: '';
+                height: 22px;
+                width: 30px;
+                background: url(http://go.redandyellow.co.za/l/635981/2019-04-12/twsp/635981/36696/quote_left.png) no-repeat ;
+                background-size: contain;
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: 135px;
                 font-size: 30px;
                 font-style: normal;
                 font-weight: 900;
@@ -84,10 +91,15 @@
             }
             &:after{
                 font-family: "Font Awesome 5 Free" !important;
-                content: '\f10e';
+                content: '';
+
+                height: 22px;
+                width: 30px;
+                background: url(http://go.redandyellow.co.za/l/635981/2019-04-12/twsr/635981/36698/quote_right.png) no-repeat ;
+                background-size: contain;
                 position: absolute;
-                bottom: -10px;
-                right: 0;
+                bottom: 10px;
+                right: 30px;
                 font-size: 30px;
                 font-style: normal;
                 font-weight: 900;
@@ -96,11 +108,15 @@
         }
 
         &__subtitle{
-            margin-top: 20px;
-            font-size: 14px;
+            font-weight: bold;
+            padding-left: 40px;
+            padding-right: 30px;
+            margin-top: 10px;
+            font-size: 12px;
             line-height: 18px;
             font-family: 'Lato', helvetica, arial, sans-serif;
-            max-width: 350px;
+            // max-width: 350px;
+            float: left;
             color: $black;
         }
     }

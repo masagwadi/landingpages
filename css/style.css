@@ -457,7 +457,7 @@ body {
 }
 
 .light-gray-bg {
-  background-color: #d8d8d8;
+  background-color: #f1f1f1;
 }
 
 .full {
@@ -506,7 +506,7 @@ body {
   font-weight: normal;
   font-size: 20px;
   line-height: 28px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .profile__img {
@@ -757,7 +757,6 @@ body {
 
 .quote {
   max-width: 500px;
-  padding-top: 60px;
 }
 @media (min-width: 768px) and (max-width: 900px) {
   .quote {
@@ -773,8 +772,8 @@ body {
   border-radius: 50%;
   overflow: hidden;
   vertical-align: top;
-  margin-top: 10px;
-  margin-right: 20px;
+  margin-top: 5px;
+  margin-right: 30px;
 }
 @media (max-width: 480px) {
   .quote__img {
@@ -790,15 +789,9 @@ body {
 }
 .quote__copy {
   display: inline-block;
-  max-width: 400px;
   padding: 10px;
   color: #000000;
-}
-@media (min-width: 481px) {
-  .quote__copy {
-    margin-top: 25%;
-    transform: translateY(-50%);
-  }
+  float: left;
 }
 .quote__copy__title {
   font-size: 20px;
@@ -806,11 +799,12 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Lato", helvetica, arial, sans-serif;
+  float: left;
 }
 .quote__copy__intro {
   font-size: 14px;
   line-height: 22px;
-  max-width: 350px;
+  float: left;
   padding-left: 40px;
   padding-right: 30px;
   position: relative;
@@ -819,10 +813,14 @@ body {
 }
 .quote__copy__intro:before {
   font-family: "Font Awesome 5 Free" !important;
-  content: "";
+  content: "";
+  height: 22px;
+  width: 30px;
+  background: url(http://go.redandyellow.co.za/l/635981/2019-04-12/twsp/635981/36696/quote_left.png) no-repeat;
+  background-size: contain;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 135px;
   font-size: 30px;
   font-style: normal;
   font-weight: 900;
@@ -830,24 +828,34 @@ body {
 }
 .quote__copy__intro:after {
   font-family: "Font Awesome 5 Free" !important;
-  content: "";
+  content: "";
+  height: 22px;
+  width: 30px;
+  background: url(http://go.redandyellow.co.za/l/635981/2019-04-12/twsr/635981/36698/quote_right.png) no-repeat;
+  background-size: contain;
   position: absolute;
-  bottom: -10px;
-  right: 0;
+  bottom: 10px;
+  right: 30px;
   font-size: 30px;
   font-style: normal;
   font-weight: 900;
   text-decoration: inherit;
 }
 .quote__copy__subtitle {
-  margin-top: 20px;
-  font-size: 14px;
+  font-weight: bold;
+  padding-left: 40px;
+  padding-right: 30px;
+  margin-top: 10px;
+  font-size: 12px;
   line-height: 18px;
   font-family: "Lato", helvetica, arial, sans-serif;
-  max-width: 350px;
+  float: left;
   color: #000000;
 }
 
+.module-block {
+  margin-bottom: 20px;
+}
 @media (max-width: 480px) {
   .module-block {
     margin-bottom: 20px;
@@ -865,7 +873,7 @@ body {
 }
 
 .cta-btn {
-  padding: 10px 80px 10px 30px;
+  padding: 10px 50px 10px 30px;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -917,7 +925,7 @@ body {
 .form-block-container {
   position: absolute;
   max-width: 350px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #f1f1f1;
   overflow: hidden;
   background-color: #ffffff;
 }
@@ -992,7 +1000,7 @@ body {
 .form-info {
   padding: 10px;
   background-color: #ffffff;
-  border-bottom: 1px solid #d8d8d8 !important;
+  border-bottom: 1px solid #f1f1f1 !important;
 }
 @media (min-width: 768px) and (max-width: 900px) {
   .form-info {
@@ -1427,13 +1435,13 @@ ul.social i {
 .row-list li {
   list-style: none;
   padding: 10px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #f1f1f1;
   border-bottom: 0;
   font-size: 14px;
   line-height: 16px;
 }
 .row-list li:last-child {
-  border-bottom: 1px solid #d8d8d8;
+  border-bottom: 1px solid #f1f1f1;
 }
 .row-list li:nth-child(even) {
   background-color: #f2f2f2;

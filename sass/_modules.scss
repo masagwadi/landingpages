@@ -1,5 +1,7 @@
 .module-block{
 
+    margin-bottom: 20px;
+
     @include breakpoint(mobileonly){
         margin-bottom: 20px;
     }
