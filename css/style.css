@@ -617,6 +617,10 @@ body {
   text-align: right;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .lesson-card {
   display: table;
   width: 100%;
@@ -727,6 +731,9 @@ body {
 .info-card__icon i {
   font-size: 35px;
   color: #da2128;
+}
+.info-card__icon img {
+  width: 50px;
 }
 .info-card__title {
   margin-top: 15px;
