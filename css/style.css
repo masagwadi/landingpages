@@ -515,6 +515,8 @@ body {
   vertical-align: top;
   float: left;
   margin-right: 10px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .profile__img img {
   width: 100%;
