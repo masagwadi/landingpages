@@ -5,6 +5,7 @@
   --------------------------*/
 
  // Declare box sizing
+
  html {
      -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -71,6 +72,10 @@
 
  .mt20{
      margin-top: 20px;
+ }
+
+ .mt30{
+    margin-top: 30px;
  }
 
 //  PADDING
@@ -166,8 +171,17 @@
      }
  }
 
-
-
+ a:visited { 
+    color: currentColor  !important;
+    text-decoration: none !important;
+  }
+  a:hover {
+    color: currentColor  !important;
+    text-decoration: none !important;
+  }
+  a { 
+    text-decoration: none !important;
+  }
  // Profile
 
  .profile {

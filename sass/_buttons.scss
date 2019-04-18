@@ -43,7 +43,7 @@
     &--red{
         background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 96% 7px #da2128;
         border: 2px solid #da2128;
-        color: #ffffff;
+        color: #ffffff  !important;
         background-size: 25px;
         &:hover{
             color: #000000;

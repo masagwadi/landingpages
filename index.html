@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400,400i,700,700i|Sintony:400,700"
-        rel="stylesheet"><!-- Bootstrap CSS -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400,400i,700,700i|Sintony:400,700" rel="stylesheet"> -->
+        <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
 
     <!-- <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" rel="stylesheet"> -->
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"> -->
 
     <!-- Slick Slider -->
     <!-- Add the slick-theme.css if you want default styling -->
@@ -28,10 +27,12 @@
  <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
 
  <style type="text/css">
-  
+
 /*********************
 BREAKPOINTS
 *********************/
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:200,300,400,400i,700,700i|Sintony:400,700");
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -382,28 +383,91 @@ template {
   display: none;
 }
 
-.slick-arrow {
-  padding: 5px;
-  height: 30px;
-  width: 30px;
+/* Font for headlines */
+h1, h2, h3 {
+  font-family: "lato", sans-serif;
 }
-.slick-arrow:before {
+
+/* Font colors and size for headlines */
+h1 {
+  color: #333;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 0;
+  font-family: "Lato", helvetica, arial, sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  color: #da2128;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: normal;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFF;
+  margin: 0;
+}
+
+.event-details {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 30px;
+  color: #333;
+}
+@media (max-width: 480px) {
+  .event-details [class^=col-] {
+    padding-bottom: 15px;
+  }
+}
+
+.event-details i {
+  font-size: 30px;
+  padding-right: 10px;
+  position: relative;
+  top: 5px;
   color: #da2128;
 }
 
-@media (min-width: 768px) and (max-width: 900px) {
-  .slider, .slick-slider {
-    max-width: calc(100% - 40px);
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 480px) {
+  .event-title {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
+
 @media (max-width: 480px) {
-  .slider, .slick-slider {
-    max-width: calc(100% - 40px);
-    margin-left: auto;
-    margin-right: auto;
+  .event-type {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
   }
+}
+
+.headline-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px 10px;
+}
+
+.headline {
+  padding: 0 0 15px 0;
+}
+
+.description {
+  color: #333;
+  font-size: 15px;
 }
 
 /* --------------------------
@@ -464,6 +528,10 @@ body {
 
 .mt20 {
   margin-top: 20px;
+}
+
+.mt30 {
+  margin-top: 30px;
 }
 
 .pad-x10 {
@@ -539,12 +607,28 @@ body {
   margin-bottom: 20px;
 }
 
+a:visited {
+  color: currentColor !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: currentColor !important;
+  text-decoration: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
 .profile__img {
   width: 80px;
   height: 80px;
   vertical-align: top;
   float: left;
   margin-right: 10px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .profile__img img {
   width: 100%;
@@ -649,6 +733,30 @@ body {
 
 .inline-block {
   display: inline-block;
+}
+
+.slick-arrow {
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+}
+.slick-arrow:before {
+  color: #da2128;
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .slider, .slick-slider {
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 480px) {
+  .slider, .slick-slider {
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .lesson-card {
@@ -792,9 +900,6 @@ body {
   font-weight: 900;
 }
 
-.quote {
-  max-width: 500px;
-}
 @media (min-width: 768px) and (max-width: 900px) {
   .quote {
     margin-left: auto;
@@ -841,7 +946,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   float: left;
-  padding-left: 40px;
+  padding-left: 0;
   padding-right: 30px;
   position: relative;
   margin-top: 20px;
@@ -856,7 +961,7 @@ body {
   background-size: contain;
   position: absolute;
   top: 0;
-  left: 135px;
+  left: 100px;
   font-size: 30px;
   font-style: normal;
   font-weight: 900;
@@ -890,7 +995,7 @@ body {
 }
 
 .module-block {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 @media (max-width: 480px) {
   .module-block {
@@ -950,7 +1055,7 @@ body {
 .cta-btn--red {
   background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 96% 7px #da2128;
   border: 2px solid #da2128;
-  color: #ffffff;
+  color: #ffffff !important;
   background-size: 25px;
 }
 .cta-btn--red:hover {
@@ -1349,93 +1454,6 @@ form.form .pd-radio .value span {
 }
 
 /* END OF FORM inline styling */
-/* Font for headlines */
-h1, h2, h3 {
-  font-family: "lato", sans-serif;
-}
-
-/* Font colors and size for headlines */
-h1 {
-  color: #333;
-  font-size: 40px;
-  line-height: 48px;
-  margin: 0;
-  font-family: "Lato", helvetica, arial, sans-serif;
-  font-weight: 300;
-}
-
-h2 {
-  color: #da2128;
-  font-size: 22px;
-  line-height: 28px;
-  font-weight: normal;
-  margin: 0;
-}
-@media (max-width: 480px) {
-  h2 {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 15px;
-  }
-}
-
-h3 {
-  font-size: 20px;
-  line-height: 28px;
-  color: #FFF;
-  margin: 0;
-}
-
-.event-details {
-  table-layout: fixed;
-  width: 100%;
-  font-size: 16px;
-  margin-top: 30px;
-  color: #333;
-}
-@media (max-width: 480px) {
-  .event-details [class^=col-] {
-    padding-bottom: 15px;
-  }
-}
-
-.event-details i {
-  font-size: 30px;
-  padding-right: 10px;
-  position: relative;
-  top: 5px;
-  color: #da2128;
-}
-
-@media (max-width: 480px) {
-  .event-title {
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
-
-@media (max-width: 480px) {
-  .event-type {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 15px;
-  }
-}
-
-.headline-container {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px 10px;
-}
-
-.headline {
-  padding: 0 0 15px 0;
-}
-
-.description {
-  color: #333;
-  font-size: 15px;
-}
-
 .footer {
   padding: 35px 0 30px 0;
   font-size: 11px;
@@ -1496,7 +1514,7 @@ ul.social i {
 /*# sourceMappingURL=style.css.map */
 
 
-    
+
  </style>
 
     <title>%%title%%</title>
@@ -1671,14 +1689,14 @@ ul.social i {
         <div class="container ">
             <div class="row">
 
-                <div class="col-sm-8" pardot-removable="intro">
+                <div class="col-sm-8 mt30" pardot-removable="intro">
                     <h2 pardot-region="section-one-title" pardot-region-type="pardot">Get the Digital Marketing Certificate that guarantees career success. </h2>
                     <p pardot-region="section-one-intro" pardot-region-type="pardot">In just 10 short weeks and over 8 modules you'll get the practical skills to implement a winning
                         digital marketing strategy. This course is perfect for anyone wanting to effectively market
                         their brand or business</p>
                 </div>
                                
-                <div class="col-sm-8 mt50 full-on-tab">
+                <div class="col-sm-8 mt20 full-on-tab">
                     <h1 class="section-title--sub text-red"  pardot-region="section-three-title" pardot-region-type="pardot">What you'll learn:</h1>
                     <div pardot-region="section-three-list">
                         <ul class="row-list">
@@ -1710,48 +1728,56 @@ ul.social i {
                             <div class="col-sm-3">
                                 <div class="module-block">
                                     <h1 class="module-block__title text-red" >Module 01</h1>
+                                    <h4 class="module-block__subtitle" >Lorem ipsum dolor sit amet consectetur</h4>
                                     <p class="module-block__intro" >Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="module-block">
                                     <h1 class="module-block__title text-red" >Module 01</h1>
+                                    <h4 class="module-block__subtitle" >Lorem ipsum dolor sit amet consectetur</h4>
                                     <p class="module-block__intro" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="module-block">
                                     <h1 class="module-block__title text-red" >Module 01</h1>
+                                    <h4 class="module-block__subtitle" >Lorem ipsum dolor sit amet consectetur</h4>
                                     <p class="module-block__intro" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="module-block">
                                     <h1 class="module-block__title text-red" >Module 01</h1>
+                                    <h4 class="module-block__subtitle" >Lorem ipsum dolor sit amet consectetur</h4>
                                     <p class="module-block__intro" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="module-block">
                                     <h1 class="module-block__title text-red" >Module 01</h1>
+                                    <h4 class="module-block__subtitle" >Lorem ipsum dolor sit amet consectetur</h4>
                                     <p class="module-block__intro" >Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="module-block">
                                     <h1 class="module-block__title text-red" >Module 01</h1>
+                                    <h4 class="module-block__subtitle" >Lorem ipsum dolor sit amet consectetur</h4>
                                     <p class="module-block__intro" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="module-block">
                                     <h1 class="module-block__title text-red" >Module 01</h1>
+                                    <h4 class="module-block__subtitle" >Lorem ipsum dolor sit amet consectetur</h4>
                                     <p class="module-block__intro" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="module-block">
                                     <h1 class="module-block__title text-red" >Module 01</h1>
+                                    <h4 class="module-block__subtitle" >Lorem ipsum dolor sit amet consectetur</h4>
                                     <p class="module-block__intro" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
@@ -2144,7 +2170,7 @@ ul.social i {
             });
 
 
-
+            $('#pardot-form .Would_you_like_to_receive_our_weekly_newsletters_ .value :first-child input').prop("checked", true);
 
             // Progress prototype
 

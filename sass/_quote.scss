@@ -4,7 +4,7 @@
 // }
 
 .quote{
-    max-width: 500px;
+    // max-width: 500px;
     // padding-top: 60px;
     // padding-bottom: 60px;
 
@@ -68,7 +68,7 @@
             line-height: 22px;
             float: left;
             // max-width: 350px;
-            padding-left: 40px;
+            padding-left: 0;
             padding-right: 30px;
             position: relative;
             margin-top: 20px;
@@ -82,7 +82,7 @@
                 background-size: contain;
                 position: absolute;
                 top: 0;
-                left: 135px;
+                left: 100px;
                 font-size: 30px;
                 font-style: normal;
                 font-weight: 900;
