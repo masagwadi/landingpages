@@ -127,7 +127,26 @@
     text-align: center;
 
     // border: 1px solid #d8d8d8;
+
+    &:hover{
+        box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+        transition: box-shadow .15s cubic-bezier(.4,0,.2,1);
+    }
+
+    &.active{
+        box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+        transition: box-shadow .15s cubic-bezier(.4,0,.2,1);
+    }
     
+    &__header{
+        padding: 20px 10px 5px 10px;
+        margin-bottom: 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        background-color: #333333;
+        color: #fff;
+    }
 
     &__img{
         display: block;
@@ -147,7 +166,7 @@
         text-align: center;
         i{
             font-size: 35px;
-            color: $red;
+            color: $white;
         }
 
         img{
@@ -161,6 +180,7 @@
         font-size: 18px;
         line-height: 20px;
         font-weight: bold;
+        color: $white;
     }
 
     &__intro{
@@ -184,4 +204,39 @@
         }
     }
 
+}
+
+.course-info{
+
+    padding:30px 20px 20px 20px;
+    border: 2px solid #333333;
+    border-radius: 5px;
+    color: $black;
+    font-weight: bold;
+    text-align: center;
+
+    @include breakpoint(mobileonly) {
+        margin-top: 40px;
+    }
+
+    .icon{
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        /* margin-top: 50px; */
+        transition: tra;
+        transform: translateX(-50%);
+        background-color: #fff;
+        border: 2px solid #333333;
+        height: 50px;
+        padding-top: 7px;
+        width: 50px;
+        text-align: center;
+        border-radius: 50%;
+
+        i{
+            padding-right: 0;
+            top: 0;
+        }
+    }
 }

@@ -51,4 +51,17 @@
             background-size: 25px;
         }
     }
+
+    &--black{
+        background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 96% 7px #333333;
+        border: 2px solid #333333;
+        color: #ffffff  !important;
+        background-size: 25px;
+        &:hover{
+            color: #000000;
+            background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover-red.png) no-repeat 96% 7px #ffffff;
+            background-size: 25px;
+        }
+    }
+
 }

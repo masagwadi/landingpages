@@ -493,8 +493,8 @@ body {
   display: inline-block;
 }
 
-.mt50 {
-  margin-top: 50px;
+.mt10 {
+  margin-top: 10px;
 }
 
 .mt20 {
@@ -505,6 +505,74 @@ body {
   margin-top: 30px;
 }
 
+.mt40 {
+  margin-top: 40px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.mt60 {
+  margin-top: 60px;
+}
+
+.mt70 {
+  margin-top: 70px;
+}
+
+.mt80 {
+  margin-top: 80px;
+}
+
+.mt90 {
+  margin-top: 90px;
+}
+
+.mt100 {
+  margin-top: 100px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
+.mb60 {
+  margin-bottom: 60px;
+}
+
+.mb70 {
+  margin-bottom: 70px;
+}
+
+.mb80 {
+  margin-bottom: 80px;
+}
+
+.mb90 {
+  margin-bottom: 90px;
+}
+
+.mb100 {
+  margin-bottom: 100px;
+}
+
 .pad-x10 {
   padding: 10px;
 }
@@ -513,16 +581,84 @@ body {
   padding: 20px;
 }
 
+.pt10 {
+  padding-top: 10px;
+}
+
 .pt20 {
   padding-top: 20px;
+}
+
+.pt30 {
+  padding-top: 30px;
+}
+
+.pt40 {
+  padding-top: 40px;
+}
+
+.pt50 {
+  padding-top: 50px;
+}
+
+.pt60 {
+  padding-top: 60px;
+}
+
+.pt70 {
+  padding-top: 70px;
+}
+
+.pt80 {
+  padding-top: 80px;
+}
+
+.pt90 {
+  padding-top: 90px;
+}
+
+.pt100 {
+  padding-top: 100px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
 }
 
 .pb20 {
   padding-bottom: 20px;
 }
 
-.pt50 {
-  padding-top: 50px;
+.pb30 {
+  padding-bottom: 30px;
+}
+
+.pb40 {
+  padding-bottom: 40px;
+}
+
+.pb50 {
+  padding-bottom: 50px;
+}
+
+.pb60 {
+  padding-bottom: 60px;
+}
+
+.pb70 {
+  padding-bottom: 70px;
+}
+
+.pb80 {
+  padding-bottom: 80px;
+}
+
+.pb90 {
+  padding-bottom: 90px;
+}
+
+.pb100 {
+  padding-bottom: 100px;
 }
 
 .light-gray-bg {
@@ -706,6 +842,85 @@ a {
   display: inline-block;
 }
 
+.box-shadow {
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.share {
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 40px;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  border: 1px solid #da2128;
+  z-index: 9999;
+  overflow: hidden;
+  padding: 30px 20px 20px 20px;
+  color: #da2128 !important;
+}
+.share.black {
+  border: 1px solid #333333;
+  color: #333333 !important;
+}
+@media (max-width: 480px) {
+  .share {
+    top: 55px;
+    right: 15px;
+  }
+}
+.share a {
+  color: #da2128 !important;
+}
+.share a:visited {
+  color: #da2128 !important;
+}
+.share a:hover {
+  color: #f1ce00 !important;
+}
+.share.open {
+  height: auto !important;
+  width: 150px !important;
+  border-radius: 5px;
+}
+.share.open .share__info {
+  display: block;
+}
+.share.open .share__icon:before {
+  content: "";
+}
+.share__icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.share__icon:hover {
+  color: #f1ce00;
+}
+.share__icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  height: 15px;
+  font-size: 15px;
+  line-height: 15px;
+  transition: 250ms ease all;
+  transform-origin: center center;
+  font-weight: 900;
+}
+.share__info {
+  display: none;
+}
+.share__info__item {
+  margin-bottom: 10px;
+}
+.share__info__item span {
+  display: inline-block;
+  margin-left: 5px;
+}
+
 .slick-arrow {
   padding: 5px;
   height: 30px;
@@ -821,6 +1036,22 @@ a {
 .info-card {
   text-align: center;
 }
+.info-card:hover {
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.info-card.active {
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.info-card__header {
+  padding: 20px 10px 5px 10px;
+  margin-bottom: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #333333;
+  color: #fff;
+}
 .info-card__img {
   display: block;
   height: 90px;
@@ -839,7 +1070,7 @@ a {
 }
 .info-card__icon i {
   font-size: 35px;
-  color: #da2128;
+  color: #ffffff;
 }
 .info-card__icon img {
   width: 50px;
@@ -850,6 +1081,7 @@ a {
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
+  color: #ffffff;
 }
 .info-card__intro {
   font-size: 16px;
@@ -869,6 +1101,39 @@ a {
   right: 0;
   font-size: 15px;
   font-weight: 900;
+}
+
+.course-info {
+  padding: 30px 20px 20px 20px;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .course-info {
+    margin-top: 40px;
+  }
+}
+.course-info .icon {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  /* margin-top: 50px; */
+  transition: tra;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 2px solid #333333;
+  height: 50px;
+  padding-top: 7px;
+  width: 50px;
+  text-align: center;
+  border-radius: 50%;
+}
+.course-info .icon i {
+  padding-right: 0;
+  top: 0;
 }
 
 @media (min-width: 768px) and (max-width: 900px) {
@@ -893,6 +1158,16 @@ a {
     display: block;
     margin-left: auto;
   }
+}
+.quote__img.border-bottom-yellow {
+  border-bottom: 5px solid #f1ce00;
+}
+.quote__img.left-radius {
+  border-top-left-radius: 30%;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-right: 35px;
 }
 .quote__img img {
   height: 100%;
@@ -932,7 +1207,7 @@ a {
   background-size: contain;
   position: absolute;
   top: 0;
-  left: 100px;
+  left: 105px;
   font-size: 30px;
   font-style: normal;
   font-weight: 900;
@@ -1034,6 +1309,17 @@ a {
   background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover-red.png) no-repeat 96% 7px #ffffff;
   background-size: 25px;
 }
+.cta-btn--black {
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg.png) no-repeat 96% 7px #333333;
+  border: 2px solid #333333;
+  color: #ffffff !important;
+  background-size: 25px;
+}
+.cta-btn--black:hover {
+  color: #000000;
+  background: url(https://red-and-yellow-icmfxmvdkqz7ku.stackpathdns.com/content/themes/red-yellow/resources/assets/img/icon_btn-lrg-hover-red.png) no-repeat 96% 7px #ffffff;
+  background-size: 25px;
+}
 
 .form-block-container {
   position: absolute;
@@ -1102,6 +1388,9 @@ a {
 }
 .form-block__title.yellow {
   background-color: #f1ce00;
+}
+.form-block__title.black {
+  background-color: #333333;
 }
 @media (max-width: 480px) {
   .form-block {
